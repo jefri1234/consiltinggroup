@@ -1,0 +1,40 @@
+.contenedor-beneficios{
+    flex-direction: column-reverse;
+    color: white;
+    background-color:  rgb(103, 14, 14);
+    align-items: center;
+    font-size: 1.3rem;
+    }
+    .fuentes-seccion-beneficio p {
+        font-size: 1rem;
+    }
+
+
+@media(max-width:1500px){
+    .contenedor-beneficios{
+    padding-bottom: 2em;
+    }
+    .imagen-seccion-beneficio{
+        width: 20%;
+    }
+    .fuentes-seccion-beneficio{
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+
+}
+
+@media(max-width:1124px){
+
+    .contenedor-beneficios{
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: rgb(103, 14, 14);
+        color: white;
+        }
+        .imagen-seccion-beneficio{
+            width: 35%;
+            color: white;
+        }
+}

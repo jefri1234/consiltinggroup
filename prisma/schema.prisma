@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+//relacion de UNO A MUCHOS 
+model User{
+  id Int @id @default(autoincrement())
+  usuario String
+  nombre String
+  apellido String
+  contrasena String
+  telefono String
+  courses Curso[] @relation("UserCourses")
+}
+
+model Curso{
+  id Int @id @default(autoincrement())
+  nombre String @unique
+  description String
+  Instructor String
+  duracion String
+  users      User[]  @relation("UserCourses")
+}
+
+
+//dos tablas mas añadidas esto lo que puse esta en chatpt que me dio en gogle chrome
+
+// model Material {
+//   id        Int    @id @default(autoincrement())
+//   nombre    String
+//   tipo      String
+//   url       String
+//   cursoId   Int
+//   curso     Curso   @relation(fields: [cursoId], references: [id])
+// }

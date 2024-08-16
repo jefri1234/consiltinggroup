@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    user-select: none;
+}
+
+.texto-logo{
+    text-align: center;
+    font-size:9px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.enlace:hover{
+    transition: 200ms;
+    color: green;
+   translate:initial;
+    
+}
+.boton-aulavirtual{
+    border: solid white 2px;
+    padding:10px;
+    border-radius: 10px;
+}
+
+/*linea donde dice apasionados por lo que hacemos y EL BOTON AULA VIRTUAL  */
+.boton-aulavirtual:hover{
+    cursor: pointer;
+    border: solid white 2px;
+    background-color: rgb(191, 26, 26);
+    padding:10px;
+    border-radius: 10px;
+}
+
+@media(max-width:1024px){
+    .contenedor-btn-aulaVirtual{
+        flex-direction: column;
+        padding-bottom: 1em;
+        font-weight: 1px;
+    }
+
+}
+
+/* carrusel de imagenes*/
+
+.imagen-background{
+background: linear-gradient(to bottom, rgba(65, 38, 38, 0.725), rgba(115, 15, 15, 0.725)),
+url('/img/profesioness.jpg');
+width: 100%;
+background-position: center;
+background-size: contain;
+width: 100%;
+height:100%;
+display: flex;
+justify-content:space-around;
+align-items: center;
+
+}
+.imagen-slite1{
+    width: 50rem;
+}
+.titulo-consulting{
+    margin-bottom: 2rem;
+}
+.text-parrafo-slite1{
+    margin-top: 1rem;
+}
+
+@media(max-width:1500px){
+    .imagen-background{
+    height: 55vh;
+    }
+    .fuente-slite1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media(max-width:1124px){
+    .imagen-background{
+    height: 100%;
+    flex-direction: column;
+    }
+    .fuente-slite1{
+        font-size: 2rem;
+    }
+    .titulo-consulting{
+    margin-top: 3.5rem;
+    }
+    .text-parrafo-slite1{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .imagen-slite1{
+        width:100%;
+
+    }
+
+}
+
+/* slite2 de  carrusel de imagenes------------------------------------------------------------------*/
+.imagen-slite2{
+    width:100%;
+}
+.titulo-slite2{
+    font-size: 2.5rem;
+}
+.subtitulo-slite2{
+font-size: 2rem;
+font-weight: normal;
+}
+
+@media(max-width:1500px){
+    .subtitulo-slite2{
+        font-size: 1.1rem;
+    }
+
+}
+
+/* fin de  carrusel de imagenes------------------------------------------------------------------*/
+
+
+
+/* footer del header */
+
+.footer-header{
+    display: flex;
+    justify-content:space-between;
+}
+
+@media(max-width:1024px){
+    .footer-header{
+        flex-direction: column;
+        padding-bottom: 1em;
+        font-weight: 1px;
+        justify-content: center;
+        gap:3em;
+        align-items: center;
+
+    }
+
+}
+
+/* footer del header--------------------------------- */
+
+.boton-watsap-estatico{
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    z-index: 10000;
+}
+.contenedor-agradecimiento h1{
+    font-size: 2.5rem;
+}
+.contenedor-agradecimiento h2{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.contenedor-agradecimiento p{
+    font-size: 1.3rem;
+}
+
+
+@media(max-width:1050px){
+    .contenedor-agradecimiento h1{
+        font-size: 1.9rem;
+    }
+    .contenedor-agradecimiento p{
+        font-size: 1rem
+    }
+    .contenedor-agradecimiento h2{
+        font-size: 1rem;
+    }
+}
