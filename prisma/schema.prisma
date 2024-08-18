@@ -28,6 +28,7 @@ model Curso{
   Instructor String
   duracion String
   users      User[]  @relation("UserCourses")
+  //materiales Material [] @relation("CursosMateriales")
 }
 
 
@@ -39,5 +40,5 @@ model Curso{
 //   tipo      String
 //   url       String
 //   cursoId   Int
-//   curso     Curso   @relation(fields: [cursoId], references: [id])
+//  cursos  Curso[] @relation("CursosMateriales")
 // }

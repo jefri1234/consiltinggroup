@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import {PrismaClient } from "@prisma/client";
-import { setCookie } from '../../session.ts';
 
 const prisma = new PrismaClient()
 
@@ -23,12 +22,14 @@ export async function POST(request:NextRequest){
         })
     }
     else{
-        console.log(alumno.id);
-
+        // update en la columna token del alumno
+        // tokenUser String
+        
         return NextResponse.json({
             message:"ingrso correctamente",
             success:200,
-            data:alumno
+            data:alumno,
+            user:alumno.id
         })
     }
 }
