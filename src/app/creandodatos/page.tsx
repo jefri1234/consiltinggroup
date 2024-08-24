@@ -6,24 +6,19 @@ const prisma = new PrismaClient();
 
 //CREANDO UN USUARIO Y ASIGNANDO CURSOS 
 async function main() {
-    // Crear usuarios
-     await prisma.user.create({
+  try {
+    const material = await prisma.material.create({
       data: {
-        usuario: 'jeff123_123',
-        nombre: 'jefferson',
-        apellido: 'obregon',
-        contrasena: 'jeff11',
-        telefono: '907656456',
-        courses: {
-          connect: [
-            { id: 1 }, // ID de un curso existente
-            { id: 2 },  // ID de otro curso existente
-            { id: 3},
-            { id: 4}
-          ]
-        }
+        nombre: 'Introducción a Matemática',
+        tipo: 'video',
+        url: 'https://ejemplo.com/introduccion-matematica',
+        cursoId: 1, // ID del curso existente
       },
     });
+    console.log('Material creado:', material);
+  } catch (error) {
+    console.error('Error al crear el material:', error);
+  }
 }
 
 function crenaodatos() {

@@ -7,8 +7,6 @@ const prisma = new PrismaClient();
 export async function POST(request: NextRequest) {
   const { userfound } = await request.json();
 
-  console.log("consola next:", userfound);
-
   try {
     // Buscar todos los cursos asociados al id del usuario
     const cursos = await prisma.curso.findMany({
@@ -20,13 +18,13 @@ export async function POST(request: NextRequest) {
         },
       },
     });
-    console.log(cursos)
 
     return NextResponse.json({
       message: "Cursos del alumno",
       alumno: userfound,
       cursos: cursos,
       status: 200,
+      
     });
   } catch (error) {
     console.error("Error al buscar cursos:", error);

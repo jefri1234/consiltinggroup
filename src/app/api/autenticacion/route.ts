@@ -13,7 +13,8 @@ export async function POST(request:NextRequest){
     const user = await prisma.user.findFirst({ //from the user model  search the id 
         where:{
             usuario:usuario,
-            contrasena:contrasena
+            contrasena:contrasena,
+            tipoUser: "admin"
         }
     })
     console.log(user)

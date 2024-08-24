@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,9 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//relacion de UNO A MUCHOS 
+//relacion de UNO A MUCHOS
+
 model User{
   id Int @id @default(autoincrement())
+  tipoUser String?  @default("estudiante")
   usuario String
   nombre String
   apellido String
@@ -21,24 +20,22 @@ model User{
   courses Curso[] @relation("UserCourses")
 }
 
-model Curso{
-  id Int @id @default(autoincrement())
-  nombre String @unique
+model Curso {
+  id          Int          @id @default(autoincrement())
+  nombre      String       @unique
   description String
-  Instructor String
-  duracion String
-  users      User[]  @relation("UserCourses")
-  //materiales Material [] @relation("CursosMateriales")
+  Instructor  String
+  duracion    String
+  imagen      String?
+  users       User[]       @relation("UserCourses")
+  materiales  Material[]   @relation("CursoMateriales")
 }
 
-
-//dos tablas mas añadidas esto lo que puse esta en chatpt que me dio en gogle chrome
-
-// model Material {
-//   id        Int    @id @default(autoincrement())
-//   nombre    String
-//   tipo      String
-//   url       String
-//   cursoId   Int
-//  cursos  Curso[] @relation("CursosMateriales")
-// }
+model Material {
+  id        Int    @id @default(autoincrement())
+  nombre    String
+  tipo      String
+  url       String
+  cursoId   Int
+  curso     Curso  @relation("CursoMateriales", fields: [cursoId], references: [id])
+}

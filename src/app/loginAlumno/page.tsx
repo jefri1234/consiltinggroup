@@ -36,16 +36,12 @@ function loginAlumno() {
       direccionar()
       //econtrarcursos();
     }
-  }, [userfound]);//DIRECCIONAR Y PASAR ESTO AL AULA VIRTUAL EL ID
+  }, [userfound]);
 
+  //DIRECCIONAR Y PASAR AL AULA VIRTUAL EL ID ALMACENADO EN EL USESTATE
   function direccionar(){
     router.push(`/pages/aula?userfound=${userfound}`); // Pasamos el número como parámetro en la URL
   }
-
-
-  
-
-
 
   return (
     <div className='caja-login'>
