@@ -5,7 +5,7 @@ import React from 'react'
 function Agradecimiento() {
   return (
     <div className='flex justify-center items-center py-52 px-3 
-     max-w-4xl m-auto contenedor-agradecimiento'>
+        m-auto contenedor-agradecimiento'>
         <div className='text-center'>
         <h1 className='mb-5'>GRASIAS POR VISITARNOS</h1>
         <p className=''>Si deseas mas imformacion sobre nuestras especializaciones o representas una empresa que desea capacitar a su colaboradores</p>

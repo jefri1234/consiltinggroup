@@ -6,8 +6,8 @@ const HomePage: React.FC = () => {
     <div className="flex flex-wrap justify-center">
       <Card 
         title="Diplomado GRATUITO"
-        curso="Gestión Estratégica de Recursos Humanos"
-        imageSrc="/img/profesioness.jpg"
+        curso="SEGURIDAD Y SALUD EN EL TRABAJO"
+        imageSrc="/cursos/sst.jpg"
         
       >
         <p>jeff</p>
@@ -17,44 +17,39 @@ const HomePage: React.FC = () => {
 
       <Card 
         title="Diplomado GRATUITO"
-        curso="Seguridad y Salud en el Trabajo"
-        imageSrc="/img/profesioness.jpg"
+        curso="SUPERVISOR LÍDER SSOMA"
+        imageSrc="/cursos/ssoma.jpg"
         
       />
       <Card 
         title="Diplomado GRATUITO"
-        curso="Gestión Estratégica de Recursos Humanos"
-        imageSrc="/img/profesioness.jpg"
+        curso="SISTEMA INTEGRADO DE ADMINISTRACION FINANCIERA-SIAF"
+        imageSrc="/cursos/siaf.jpg"
         
       />
       <Card 
         title="Diplomado GRATUITO"
-        curso="Seguridad y Salud en el Trabajo"
-        imageSrc="/img/profesioness.jpg"
+        curso="GESTIÓN DE PLANILLA Y LEGISLACIÓN LABORAL"
+        imageSrc="/cursos/planilla.jpg"
         
       />
       <Card 
         title="Diplomado GRATUITO"
-        curso="Gestión Estratégica de Recursos Humanos"
-        imageSrc="/img/profesioness.jpg"
+        curso="AUDITORIA Y CONTROL GUBERNAMENTAL"
+        imageSrc="/cursos/auditoria.jpg"
         
       />
       <Card 
         title="Diplomado GRATUITO"
-        curso="Seguridad y Salud en el Trabajo"
-        imageSrc="/img/profesioness.jpg"
+        curso="ANALISTA DE RECURSOS HUMANOS"
+        imageSrc="/cursos/analista_rrhh.jpg"
         
       />
+
       <Card 
         title="Diplomado GRATUITO"
-        curso="Gestión Estratégica de Recursos Humanos"
-        imageSrc="/img/profesioness.jpg"
-        
-      />
-      <Card 
-        title="Diplomado GRATUITO"
-        curso="Seguridad y Salud en el Trabajo"
-        imageSrc="/img/profesioness.jpg"
+        curso="RECURSOS HUMANOS"
+        imageSrc="/cursos/rrhh.jpg"
         
       />
       {/* Puedes agregar más Card aquí con diferentes props */}

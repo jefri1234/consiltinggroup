@@ -54,22 +54,22 @@ function Curso({ params }: CursoProps) {
   };
 
   return (
-    <div className="p-4">
+    <div className="bg-gray-950 text-white h-screen">
       {cursoData ? (
-        <div className="bg-white shadow-md rounded-lg p-6 text-center flex gap-3 justify-around">
+        <div className="shadow-md rounded-lg p-6 text-center flex gap-3 justify-around">
           <div>
-            <h2 className="text-4xl font-semibold font-serif">
+            <h2 className="text-5xl ">
               Curso de {cursoData.nombre}
             </h2>
-            <p className="text-gray-700 mt-2">
-              <span className="font-bold inline-block">Instructor: </span>
+            <p className="text-white mt-2">
+              <span className="font-bold inline-block">Instructor:</span>
               {cursoData.Instructor}
             </p>
-            <p className="text-gray-700 mt-2">
+            <p className="text-white mt-2">
               <span className="font-bold inline-block">Descripción: </span>
               {cursoData.description}
             </p>
-            <p className="text-gray-700 mt-2">
+            <p className="text-white mt-2">
               <span className="font-bold inline-block">Duración: </span>
               {cursoData.duracion}
             </p>
@@ -85,46 +85,69 @@ function Curso({ params }: CursoProps) {
           </div>
         </div>
       ) : (
-        <p className="text-gray-500">Cargando datos del curso...</p>
+        <p className="text-white bg-gray-900 h-screen flex justify-center items-center text-2xl">Cargando datos del curso...</p>
       )}
 
       {/* Mostrar los materiales del curso */}
-      <div className="mt-8 space-y-6" >
-        {materiales.map((material) => (
-          <div key={material.id} className="flex gap-2 ">
-            {material.tipo === 'imagen' && (
-              <div className="w-full h-64 relative">
+      <div className=' bg-gray-950 text-white h-screen'>
+
+
+        {/* Sección de videos */}
+        <div className="flex flex-wrap gap-4 justify-center items-center mb-8 bg-gray-800 py-5">
+          {materiales
+            .filter((material) => material.tipo === 'video')
+            .map((material) => (
+              <div key={material.id} className="flex flex-col gap-2 max-w-md">
+                <video
+                  controls
+                  src={material.url}
+                  className=" rounded-2xl shadow-lg"
+
+                />
+                <p className="text-center text-1xl">{material.nombre}</p>
+              </div>
+            ))}
+        </div>
+
+        {/* Sección de imágenes */}
+        <div className="flex gap-6 justify-center items-center pb-3">
+          {materiales
+            .filter((material) => material.tipo === 'imagen')
+            .map((material) => (
+              <div key={material.id} className="">
                 <Image
                   src={material.url}
                   alt={material.nombre}
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded shadow-lg"
+                  width={400}
+                  height={400}
+                  className="rounded-3xl bg-green-500 mx-auto"
                 />
+                <p className="text-center">{material.nombre}</p>
               </div>
-            )}
-            {material.tipo === 'video' && (
-              <video
-                controls
-                src={material.url}
-                className="w-full max-w-md rounded shadow-lg"
-              />
-            )}
-            {material.tipo === 'pdf' && (
+            ))}
+        </div>
+
+        {/* Sección de enlaces (PDF, Word, etc.) */}
+        <div className="flex flex-col gap-4 justify-center items-center bg-gray-800 py-4">
+          {materiales
+            .filter((material) =>
+              ['pdf', 'word', 'excel'].includes(material.tipo)
+            )
+            .map((material) => (
               <a
+                key={material.id}
                 href={material.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline bg-gray-900 p-3 rounded-md  text-center"
                 download
               >
-                Descargar {material.nombre}
+                Descargar {material.tipo.toUpperCase()}: {material.nombre}
               </a>
-            )}
-            {/* Repetir bloques similares para otros tipos de archivos como Word, Excel, etc. */}
-          </div>
-        ))}
+            ))}
+        </div>
       </div>
+
     </div>
   );
 }

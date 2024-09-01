@@ -68,17 +68,19 @@ const Aula: React.FC = () => {
                 setApellido(datosusuario.data.apellido)
               }
 
-  if (loading) return <div className="text-center py-4">Cargando...</div>;
+  if (loading) return <div className=" bg-gray-900 text-white flex justify-center items-center h-screen text-2xl">Cargando...</div>;
   buscarusuario()
+
+  
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Cursos del alumno {nombre} {apellido}</h1>
-      <div className="bg-white shadow-md rounded-lg p-4">
+    <div className="p-4 bg-gray-950 h-screen text-white">
+      <h1 className="text-2xl  mb-4 ml-6">Cursos del alumno {nombre} {apellido}</h1>
+      <div className=" shadow-md rounded-lg p-4">
         {cursos.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {cursos.map((curso, index) => (
               <Link href={'/pages/aula/'+ curso.id}>
-              <div key={index} className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:bg-gray-300"
+              <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:bg-gray-800 text-white"
               >
                 <Image 
                   src={curso.imagen}
@@ -89,16 +91,16 @@ const Aula: React.FC = () => {
                 />
                 <div className="p-4">
                   <h2 className="text-xl font-semibold mb-2">{curso.nombre}</h2> {/* Ajusta el nombre del campo según tu API */}
-                  <p className="text-gray-700 mb-2">Descripción: {curso.description}</p> {/* Ajusta el nombre del campo según tu API */}
-                  <p className="text-gray-700 mb-2">Instructor: {curso.Instructor}</p> {/* Ajusta el nombre del campo según tu API */}
-                  <p className="text-gray-700 font-bold">Duración del curso: {curso.duracion}</p> {/* Ajusta el nombre del campo según tu API */}
+                  <p className=" mb-2">Descripción: {curso.description}</p> {/* Ajusta el nombre del campo según tu API */}
+                  <p className=" mb-2">Instructor: {curso.Instructor}</p> {/* Ajusta el nombre del campo según tu API */}
+                  <p className=" font-bold">Duración del curso: {curso.duracion}</p> {/* Ajusta el nombre del campo según tu API */}
                 </div>
               </div>
               </Link>
             ))}
           </div>
         ) : (
-          <p className="text-gray-500">No se encontraron cursos.</p>
+          <p className="flex justify-center items-center">No se encontraron cursos.</p>
         )}
       </div>
     </div>

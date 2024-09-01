@@ -4,15 +4,15 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 
-//CREANDO UN USUARIO Y ASIGNANDO CURSOS 
+//CREANDO UN MATERIAL Y REALIAZAR ASOSIACION DEL CURSO  
 async function main() {
   try {
     const material = await prisma.material.create({
       data: {
-        nombre: 'Introducción a Matemática',
+        nombre: 'clase grabada teorico-practico',
         tipo: 'video',
-        url: 'https://ejemplo.com/introduccion-matematica',
-        cursoId: 1, // ID del curso existente
+        url: 'https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/documentos-cursos/videomate.mp4?t=2024-08-29T19%3A31%3A38.307Z',
+        cursoId: 1, // ID del curso existente matematica ejemplo
       },
     });
     console.log('Material creado:', material);

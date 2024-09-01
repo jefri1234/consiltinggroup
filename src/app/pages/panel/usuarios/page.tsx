@@ -32,6 +32,7 @@ async function page() {
           <thead className="bg-gray-800 text-white">
             <tr>
               <th className="py-2 px-4 text-left">ID</th>
+              <th className="py-2 px-4 text-left">Tipo usuario</th>
               <th className="py-2 px-4 text-left">Usuario</th>
               <th className="py-2 px-4 text-left">Nombre</th>
               <th className="py-2 px-4 text-left">Apellido</th>
@@ -47,6 +48,7 @@ async function page() {
               usuarios.map((user) => (
                 <tr className="border-b" key={user.id}>
                   <td className="py-2 px-4">{user.id}</td>
+                  <td className="py-2 px-4">{user.tipoUser}</td>
                   <td className="py-2 px-4">{user.usuario}</td>
                   <td className="py-2 px-4">{user.nombre}</td>
                   <td className="py-2 px-4">{user.apellido}</td>

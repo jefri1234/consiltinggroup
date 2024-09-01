@@ -7,6 +7,7 @@ const prisma = new PrismaClient()
 //FUNCTION TYPE POST 
 export async function POST(request:NextRequest){
     const {usuario,contrasena} =await request.json()//convierto request.body en json - realizo extraccion 
+    
     const alumno = await prisma.user.findFirst({ //from the user model  search the id 
         where:{
             usuario:usuario,
@@ -21,10 +22,7 @@ export async function POST(request:NextRequest){
             data:alumno
         })
     }
-    else{
-        // update en la columna token del alumno
-        // tokenUser String
-        
+    else{       
         return NextResponse.json({
             message:"ingrso correctamente",
             success:200,

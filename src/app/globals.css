@@ -161,6 +161,15 @@ font-weight: normal;
 .contenedor-agradecimiento p{
     font-size: 1.3rem;
 }
+.contenedor-agradecimiento{
+    background: linear-gradient(to bottom, rgba(26, 16, 16, 0.725), rgba(37, 5, 5, 0.725)),
+url('/img/profesioness.jpg');
+    background-position: center; /* Centra la imagen dentro del div */
+    width: 100%; /* Ajusta el ancho del div */
+    height: auto; /* Ajusta la altura del div */
+    z-index: 100;
+    color: white;
+}
 
 
 @media(max-width:1050px){
