@@ -17,6 +17,7 @@
     "bootstrap": "^5.3.3",
     "cookie": "^0.6.0",
     "express-session": "^1.18.0",
+    "flowbite": "^2.5.1",
     "iron-session": "^8.0.2",
     "jose": "^5.6.3",
     "jsonwebtoken": "^9.0.2",

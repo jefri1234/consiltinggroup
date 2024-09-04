@@ -11,7 +11,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Agradecimiento from './components/Agradecimiento';
 import FooterEnlaces from './components/FooterEnlaces';
-
 const Home = () => {
   return (
     <>
@@ -58,7 +57,7 @@ const Home = () => {
         />
     </Link>
     <Agradecimiento/>
-    <FooterEnlaces />
+    <FooterEnlaces />    
     </>
   );
 };
