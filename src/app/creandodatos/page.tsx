@@ -7,17 +7,16 @@ const prisma = new PrismaClient();
 //CREANDO UN MATERIAL Y REALIAZAR ASOSIACION DEL CURSO  
 async function main() {
   try {
-    const material = await prisma.material.create({
+    const seccion = await prisma.seccion.create({
       data: {
-        nombre: 'clase grabada teorico-practico',
-        tipo: 'video',
-        url: 'https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/documentos-cursos/videomate.mp4?t=2024-08-29T19%3A31%3A38.307Z',
-        cursoId: 1, // ID del curso existente matematica ejemplo
+        id_curso:1,
+        nombre: 'mejorarmientos de trabajos altura',
+        descripcion:'consta de fundamentes para proteccion'
       },
     });
-    console.log('Material creado:', material);
+    console.log('Material creado:', seccion);
   } catch (error) {
-    console.error('Error al crear el material:', error);
+    console.error('Error al crear la inscripcion:', error);
   }
 }
 

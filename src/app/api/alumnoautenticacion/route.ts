@@ -27,7 +27,7 @@ export async function POST(request:NextRequest){
             message:"ingrso correctamente",
             success:200,
             data:alumno,
-            user:alumno.id
+            user:alumno.id_usuario
         })
     }
 }

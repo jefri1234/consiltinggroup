@@ -35,72 +35,67 @@ const Aula: React.FC = () => {
               'Content-Type': 'application/json',
             },
           });
-        
-          //Si la respuesta NO es OK erro de mensaje 
-          if (!response.ok) {
-            throw new Error('Error en la petición');
-          }
           //CONIVERTE LA DATA TRAIDA EN JSON DE LOS CURSOS 
-          const data = await response.json();
-          setCursos(data.cursos); // Almacena solo el array de cursos
-        } 
-        
+          const cursos = await response.json();
+          setCursos(cursos)
+
+        }
+
         finally {
           setLoading(false);
         }
       }
     };
     fetchData();
-    
+
   }, [userfound]);
 
-              const buscarusuario =async()=>{
-                const usuario= await fetch('/api/obtenerdatosuser/',{
-                  method: 'POST',
-                  body: JSON.stringify({ userfound }),
-                  headers: {
-                    'Content-Type': 'application/json',
-                    },
-                })
-                const datosusuario= await usuario.json()
-                console.log("llegada de mi api obtenerdatosuser",datosusuario)
-                setNombre(datosusuario.data.nombre)
-                setApellido(datosusuario.data.apellido)
-              }
+  const buscarusuario = async () => {
+    const usuario = await fetch('/api/obtenerdatosuser/', {
+      method: 'POST',
+      body: JSON.stringify({ userfound }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    const datosusuario = await usuario.json()
+    setNombre(datosusuario.data.nombre)
+    setApellido(datosusuario.data.apellido)
+  }
 
   if (loading) return <div className=" bg-gray-900 text-white flex justify-center items-center h-screen text-2xl">Cargando...</div>;
   buscarusuario()
 
-  
+
   return (
     <div className="p-4 bg-gray-950 h-screen text-white">
-      <h1 className="text-2xl  mb-4 ml-6">Cursos del alumno {nombre} {apellido}</h1>
-      <div className=" shadow-md rounded-lg p-4">
-        {cursos.length > 0 ? (
+      <h1 className="text-2xl mb-4 ml-6">Cursos del alumno {nombre} {apellido}</h1>
+      <div className="shadow-md rounded-lg p-4">
+        {/* Validamos que cursos esté definido y sea un array antes de usar length */}
+        {Array.isArray(cursos) && cursos.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {cursos.map((curso, index) => (
-              <Link href={'/pages/aula/'+ curso.id}>
-              <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:bg-gray-800 text-white"
-              >
-                <Image 
-                  src={curso.imagen}
-                  width={400}
-                  height={400}
-                  alt='foto'
-                  className='w-full h-40 object-cover'
-                />
-                <div className="p-4">
-                  <h2 className="text-xl font-semibold mb-2">{curso.nombre}</h2> {/* Ajusta el nombre del campo según tu API */}
-                  <p className=" mb-2">Descripción: {curso.description}</p> {/* Ajusta el nombre del campo según tu API */}
-                  <p className=" mb-2">Instructor: {curso.Instructor}</p> {/* Ajusta el nombre del campo según tu API */}
-                  <p className=" font-bold">Duración del curso: {curso.duracion}</p> {/* Ajusta el nombre del campo según tu API */}
+              <Link href={'/pages/aula/' + curso.id_curso} key={index}>
+                <div className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:bg-gray-800 text-white">
+                  <Image
+                    src={curso.imagen}
+                    width={600}
+                    height={600}
+                    alt="foto"
+                    className="w-full h-50 object-cover"
+                  />
+                  <div className="p-4">
+                    <h2 className="text-xl font-semibold mb-2">{curso.nombre}</h2>
+                    <p className="mb-2">Descripción: {curso.description}</p>
+                    <p className="mb-2">Instructor: {curso.Instructor}</p>
+                    <p className="font-bold">Duración del curso: {curso.duracion}</p>
+                  </div>
                 </div>
-              </div>
               </Link>
             ))}
           </div>
         ) : (
-          <p className="flex justify-center items-center">No se encontraron cursos.</p>
+          <p className="flex justify-center items-center">Cursos no encontrados.</p>
         )}
       </div>
     </div>

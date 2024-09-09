@@ -10,32 +10,64 @@ datasource db {
 //relacion de UNO A MUCHOS
 
 model User{
-  id Int @id @default(autoincrement())
+  id_usuario Int @id @default(autoincrement())
   tipoUser String?  @default("estudiante")
   usuario String
   nombre String
   apellido String
   contrasena String
   telefono String
-  courses Curso[] @relation("UserCourses")
+  fecha_registro DateTime    @default(now())
+  inscripciones Inscripcion[]
+  
+  @@map("usuario")
 }
 
 model Curso {
-  id          Int          @id @default(autoincrement())
+  id_curso          Int          @id @default(autoincrement())
   nombre      String       @unique
   description String
   Instructor  String
   duracion    String
   imagen      String?
-  users       User[]       @relation("UserCourses")
-  materiales  Material[]   @relation("CursoMateriales")
+  secciones     Seccion[]
+  inscripciones Inscripcion[]
+  
+  @@map("curso")
+
+}
+model Seccion {
+  id_seccion    Int         @id @default(autoincrement())
+  id_curso      Int
+  nombre        String
+  descripcion   String?
+  fecha_inicio  DateTime?
+  fecha_fin     DateTime?
+  curso         Curso       @relation(fields: [id_curso], references: [id_curso])
+  materiales    Material[]
+  
+  @@map("seccion")
 }
 
 model Material {
-  id        Int    @id @default(autoincrement())
+  id_material        Int    @id @default(autoincrement())
+  id_seccion Int
   nombre    String
   tipo      String
   url       String
-  cursoId   Int
-  curso     Curso  @relation("CursoMateriales", fields: [cursoId], references: [id])
+  seccion       Seccion     @relation(fields: [id_seccion], references: [id_seccion])
+  
+  @@map("material")
+}
+model Inscripcion {
+  id_inscripcion Int      @id @default(autoincrement())
+  id_usuario     Int
+  id_curso       Int
+  fecha_inscripcion DateTime @default(now())
+  usuario        User   @relation(fields: [id_usuario], references: [id_usuario])
+  curso          Curso     @relation(fields: [id_curso], references: [id_curso])
+  
+  @@unique([id_usuario, id_curso])
+  
+  @@map("inscripcion")
 }

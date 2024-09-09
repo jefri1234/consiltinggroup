@@ -1,36 +1,39 @@
-import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
-
+import { NextRequest, NextResponse } from 'next/server';
+import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
-// FUNCTION TYPE POST
 export async function POST(request: NextRequest) {
-  const { userfound } = await request.json();
-
   try {
-    // Buscar todos los cursos asociados al id del usuario
-    const cursos = await prisma.curso.findMany({
+    // Obtener del cuerpo de la solicitud el id de un usuario
+    const { userfound } = await request.json();
+
+    // Verificar si userfound es un número
+    if (typeof userfound !== 'number') {
+      return NextResponse.json({ error: 'Invalid userfound value' }, { status: 400 });
+    }
+
+    // Obtener todos los cursos a los que el usuario está inscrito
+    const cursos = await prisma.inscripcion.findMany({
       where: {
-        users: {
-          some: {
-            id: userfound,
-          },
-        },
+        id_usuario: userfound
       },
+      include: {
+        curso: true // Incluir detalles del curso en la respuesta
+      }
     });
 
-    return NextResponse.json({
-      message: "Cursos del alumno",
-      alumno: userfound,
-      cursos: cursos,
-      status: 200,
-      
-    });
-  } catch (error) {
-    console.error("Error al buscar cursos:", error);
-    return NextResponse.json({
-      message: "Error al buscar cursos",
-      status: 500,
-    });
+    // Extraer solo los detalles de los cursos
+    const cursosDetails = cursos.map(inscripcion => inscripcion.curso);
+
+    // Retornar la respuesta con los detalles de los cursos
+    console.log(cursosDetails)
+    return NextResponse.json(cursosDetails);
+  } 
+
+
+  catch (error) {
+    console.error('Error en la consulta:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
+
