@@ -7,20 +7,14 @@ const prisma = new PrismaClient();
 export async function POST(request: NextRequest) {
 const { idcurso } = await request.json();
 
+    const identificador = parseInt(idcurso)
+    const secciones = await prisma.seccion.findMany({
+        where: {
+            id_curso: identificador
+            }
+        })
 
-    // Verificar si userfound es un número
-    if (typeof idcurso !== 'number') {
-        return NextResponse.json({ error: 'Invalid idcurso value' }, { status: 500 });
-      }
-
-const secciones = await prisma.seccion.findMany({
-    where: {
-        id_seccion: idcurso
-        }
-})
-
-console.log(secciones)
-
+        console.log(secciones)
 
 return NextResponse.json({
      message: 'Hello, world!',
