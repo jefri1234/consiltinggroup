@@ -10,8 +10,8 @@ async function main() {
     const seccion = await prisma.seccion.create({
       data: {
         id_curso:1,
-        nombre: 'mejorarmientos de trabajos altura',
-        descripcion:'consta de fundamentes para proteccion'
+        nombre: 'niveles de prevencion de riesgos',
+        descripcion:'fundamentes de prevencion de riesgos'
       },
     });
     console.log('Material creado:', seccion);
