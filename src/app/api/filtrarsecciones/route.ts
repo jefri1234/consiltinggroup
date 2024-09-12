@@ -11,13 +11,15 @@ const { idcurso } = await request.json();
     const secciones = await prisma.seccion.findMany({
         where: {
             id_curso: identificador
-            }
+            },
+            include: {
+                materiales: true // Incluir la tabla materiales 
+              }
         })
 
         console.log(secciones)
-
 return NextResponse.json({
-     message: 'Hello, world!',
+     datos:secciones,
      id:idcurso
     });
 }
