@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback } from 'react';
 import React from 'react';
+import Image from 'next/image';
 
 // Crear interfaces
 interface CursoParams {
@@ -76,6 +77,23 @@ function Curso({ params }: CursoProps) {
                 {seccion.materiales.map((material: any, materialIndex: number) => (
                   <div key={materialIndex} className='flex gap-2 mb-5 items-center'>
                     <p className='gap-5 font-bold'>{material.nombre}</p>
+                    {(() => {
+                      switch (material.tipo.toLowerCase()) {
+                        case 'video':
+                          return <i className="fas fa-video mr-2"><Image src="/iconos/video.png" alt="video" width={20} height={20} /></i>;
+                        case 'imagen':
+                          return <i className="fas fa-image mr-2"><Image src="/iconos/imagen.png" alt="imagen" width={20} height={20} /></i>;
+                        case 'pdf':
+                          return <i className="fas fa-file-pdf mr-2"><Image src="/iconos/pdf.png" alt="pdf" width={20} height={20} /></i>;
+                        case 'word':
+                          return <i className="fas fa-file-word mr-2"><Image src="/iconos/word.png" alt="word" width={20} height={20} /></i>;
+                        case 'excel':
+                          return <i className="fas fa-file-excel mr-2"><Image src="/iconos/excel.png" alt="excel" width={20} height={20} /></i>;
+
+                        default:
+                          return null;
+                      }
+                    })()}
                     {['video', 'imagen', 'pdf', 'word', 'excel'].includes(material.tipo.toLowerCase()) && (
                       <a 
                         href={material.url} 
