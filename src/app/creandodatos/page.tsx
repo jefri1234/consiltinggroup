@@ -10,8 +10,8 @@ async function main() {
     const seccion = await prisma.seccion.create({
       data: {
         id_curso:1,
-        nombre: 'niveles de prevencion de riesgos',
-        descripcion:'fundamentes de prevencion de riesgos'
+        nombre: 'modulo 8 normas de iso 45001',
+        descripcion:'modulo 8 normas de iso 45001'
       },
     });
     console.log('Material creado:', seccion);

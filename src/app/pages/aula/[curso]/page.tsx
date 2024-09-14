@@ -72,29 +72,13 @@ function Curso({ params }: CursoProps) {
                 activeIndex === index ? 'max-h-96' : 'max-h-0'
               }`}
             >
-              <div className="p-5 text-white">
+              <div className="p-5 text-white ">
                 {/* Contenido del acordeón */}
                 {seccion.materiales.map((material: any, materialIndex: number) => (
                   <div key={materialIndex} className='flex gap-2 mb-5 items-center'>
-                    <p className='gap-5 font-bold'>{material.nombre}</p>
-                    {(() => {
-                      switch (material.tipo.toLowerCase()) {
-                        case 'video':
-                          return <i className="fas fa-video mr-2"><Image src="/iconos/video.png" alt="video" width={20} height={20} /></i>;
-                        case 'imagen':
-                          return <i className="fas fa-image mr-2"><Image src="/iconos/imagen.png" alt="imagen" width={20} height={20} /></i>;
-                        case 'pdf':
-                          return <i className="fas fa-file-pdf mr-2"><Image src="/iconos/pdf.png" alt="pdf" width={20} height={20} /></i>;
-                        case 'word':
-                          return <i className="fas fa-file-word mr-2"><Image src="/iconos/word.png" alt="word" width={20} height={20} /></i>;
-                        case 'excel':
-                          return <i className="fas fa-file-excel mr-2"><Image src="/iconos/excel.png" alt="excel" width={20} height={20} /></i>;
+                    <p className='gap-5 '>* {material.nombre}</p>
 
-                        default:
-                          return null;
-                      }
-                    })()}
-                    {['video', 'imagen', 'pdf', 'word', 'excel'].includes(material.tipo.toLowerCase()) && (
+                    {['video', 'imagen', 'pdf', 'docx', 'xlsx','pptx','pptm','txt'].includes(material.tipo.toLowerCase()) && (
                       <a 
                         href={material.url} 
                         target='_blank' 
@@ -104,6 +88,29 @@ function Curso({ params }: CursoProps) {
                         Ver {material.tipo}
                       </a>
                     )}
+                                       {(() => {
+                      switch (material.tipo.toLowerCase()) {
+                        case 'video':
+                          return <i className="fas fa-video mr-2"><Image src="/iconos/video.png" alt="video" width={40} height={40} /></i>;
+                        case 'imagen':
+                          return <i className="fas fa-image mr-2"><Image src="/iconos/imagen.png" alt="imagen" width={40} height={40} /></i>;
+                        case 'pdf':
+                          return <i className="fas fa-file-pdf mr-2"><Image src="/iconos/pdf.png" alt="pdf" width={40} height={40} /></i>;
+                        case 'docx':
+                          return <i className="fas fa-file-word mr-2"><Image src="/iconos/word.png" alt="word" width={40} height={40} /></i>;
+                        case 'xlsx':
+                          return <i className="fas fa-file-excel mr-2"><Image src="/iconos/xls.png" alt="excel" width={40} height={40} /></i>;
+                        case 'pptx':
+                          return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/pptx.png" alt="pptx" width={40} height={40} /></i>;
+                        case 'pptm':
+                          return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/powertPoint.png" alt="pptm" width={40} height={40} /></i>;
+                        case 'txt':
+                          return <i className="fas fa-file-text mr-2"><Image src="/iconos/txt.png" alt="txt" width={40} height={40} /></i>;
+
+                        default:
+                          return null;
+                      }
+                    })()}
                   </div>
                 ))}
               </div>
