@@ -78,7 +78,7 @@ function Curso({ params }: CursoProps) {
                   <div key={materialIndex} className='flex gap-2 mb-5 items-center'>
                     <p className='gap-5 '>* {material.nombre}</p>
 
-                    {['video', 'imagen', 'pdf', 'docx', 'xlsx','pptx','pptm','txt'].includes(material.tipo.toLowerCase()) && (
+                    {['video', 'imagen', 'pdf', 'docx', 'xlsx','pptx','pptm','txt','xlsm','xls','pptx'].includes(material.tipo.toLowerCase()) && (
                       <a 
                         href={material.url} 
                         target='_blank' 
@@ -98,10 +98,12 @@ function Curso({ params }: CursoProps) {
                           return <i className="fas fa-file-pdf mr-2"><Image src="/iconos/pdf.png" alt="pdf" width={40} height={40} /></i>;
                         case 'docx':
                           return <i className="fas fa-file-word mr-2"><Image src="/iconos/word.png" alt="word" width={40} height={40} /></i>;
-                        case 'xlsx':
+                        case 'xlsm':
+                          return <i className="fas fa-file-excel mr-2"><Image src="/iconos/xls.png" alt="excel" width={40} height={40} /></i>;
+                        case 'xlsx' :
                           return <i className="fas fa-file-excel mr-2"><Image src="/iconos/xls.png" alt="excel" width={40} height={40} /></i>;
                         case 'pptx':
-                          return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/pptx.png" alt="pptx" width={40} height={40} /></i>;
+                          return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/powertPoint.png" alt="pptx" width={40} height={40} /></i>;
                         case 'pptm':
                           return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/powertPoint.png" alt="pptm" width={40} height={40} /></i>;
                         case 'txt':
