@@ -29,7 +29,7 @@ export async function POST(request:NextRequest){
     else{
  // Crear el token JWT con el ID del usuario y su nombre de usuario
  //USO DE LIBERIA JWT PARA CREAR EL TOKEN Y SER ENVIADO AL FROTEND 
-        const token = jwt.sign({ userId: user.id, usuario: user.usuario }, SECRET_KEY, { expiresIn: '1h' });
+        const token = jwt.sign({ userId: user.id_usuario, usuario: user.usuario }, SECRET_KEY, { expiresIn: '1h' });
         console.log("token en la api",token)
         return NextResponse.json({
             message:"ingrso correctamente",

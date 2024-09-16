@@ -9,10 +9,10 @@ async function main() {
   try {
     const seccion = await prisma.material.create({
       data: {
-        id_seccion:8,
-        nombre:'NTP-ISO 45001',
-        tipo:'pdf',
-        url:'https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/materiales%20sst/modulo8/NTP-ISO%2045001.pdf?t=2024-09-15T17%3A59%3A45.042Z',
+        id_seccion:7,
+        nombre:'REGISTRO_SIMPLIFICADO_SGSST_PEQUENA-EMPRESA',
+        tipo:'xlsm',
+        url:'https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/materiales%20sst/modulo7/REGISTRO_SIMPLIFICADO_SGSST_PEQUENA-EMPRESA%20(1).xlsm?t=2024-09-16T15%3A37%3A41.596Z',
       },
     });
     console.log('Material creado:', seccion);

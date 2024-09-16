@@ -72,7 +72,7 @@ function LoginAlumno() {
           />
           <input type="submit" value='Ingresar' className='button' />
         </form>
-        {error && <p className="error-message">{error}</p>}
+        {error && <p className="error-message text-red-900 text-center  mt-5 font-bold">{error}</p>}
       </div>
     </div>
   );

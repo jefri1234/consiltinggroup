@@ -44,15 +44,15 @@ function Curso({ params }: CursoProps) {
 
 ///////////////////////////////////////////////////////////////////////////
   return (
-    <div className=' mx-auto pt-7 bg-gray-900 text-white h-screen'>
+    <div className=' mx-auto pt-7   h-screen'>
       <h1 className='text-2xl text-center mb-10'>SECCIONES DEL CURSO</h1>
 
       <div className="max-w-5xl mx-auto border-2 border-gray-400 rounded-lg">
         {secciones.map((seccion, index) => (
-          <div key={seccion.id_seccion} className="border-b border-gray-200 bg-gray-800">
+          <div key={seccion.id_seccion} className="border-b border-gray-200 bg-gray-800 ">
             <button
               onClick={() => toggleAccordion(index)}
-              className="flex items-center justify-between w-full py-5 px-5 font-medium text-left text-gray-500 hover:bg-gray-800 focus:outline-none"
+              className="flex items-center justify-between w-full py-5 px-5 font-medium text-left text-gray-500 hover:bg-gray-700 focus:outline-none"
             >
               <span className='text-xl text-white'>{seccion.id_seccion}. {seccion.nombre}</span>
               <svg

@@ -129,6 +129,7 @@ function FooterEnlaces() {
                 <span className="sr-only">Twitter page</span>
               </span>
             </Link>
+            <Link href={'/login'} passHref className='text-gray-400 hover:text-white transition-colors duration-300 ms-5'>Administrador </Link>
           </div>
         </div>
       </div>

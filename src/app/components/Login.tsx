@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 function Login() {
     const [usuario, setUsuario] = useState('')
     const [contrasena, setContrasena] = useState('')
+    const [error, setError] = useState<string | null>(null);
     const router= useRouter()
     
     async function  verificando(e: FormEvent<HTMLFormElement>){
@@ -33,6 +34,7 @@ function Login() {
         } else {
             //no ingreso da mensage error lo que tiene en api
             console.log(resultado.message);
+            setError("credenciales incorrectas");
         }
     }
    
@@ -45,6 +47,7 @@ function Login() {
         <input type="password" placeholder="Contraseña" name='contrasena' autoComplete="current-password"  onChange={(e)=>setContrasena(e.target.value)}/>
         <input type="submit" value='ingresar' className='button'/>
         </form>
+        {error && <p className="error-message text-red-900 text-center  mt-5 font-bold">{error}</p>}
         <div>
         </div>
     </div>
