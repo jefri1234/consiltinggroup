@@ -19,7 +19,7 @@ const Home = () => {
             <h1 className="text-center text-3xl p-3 ">
               Apasionados por lo que hacemos
             </h1>
-            <Link href="/loginAlumno" className='boton-aulavirtual '>
+            <Link href="/login" className='boton-aulavirtual '>
               Ingreso Aula Virtual
             </Link>
         </div>

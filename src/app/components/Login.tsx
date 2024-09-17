@@ -29,12 +29,20 @@ function Login() {
         if (resultado.data?.token) {
             // Almacenar el token en una cookie segura
             document.cookie = `token=${resultado.data.token}; path=/; secure`;
-            router.push('/pages/panel');
 
+            if(resultado.alumno.tipoUser==="admin"){
+                router.push('/pages/panel');
+            }
+            else if(resultado.alumno.tipoUser==="estudiante"){
+                router.push(`/pages/aula?userfound=${resultado.alumno.id_usuario}`);
+            }
+            else if(resultado.alumno.tipoUser==="profesor"){
+                router.push(`/pages/aula?userfound=${resultado.alumno.id_usuario}`);
+            }
         } else {
             //no ingreso da mensage error lo que tiene en api
             console.log(resultado.message);
-            setError("credenciales incorrectas");
+            setError(resultado.message);
         }
     }
    
@@ -42,7 +50,7 @@ function Login() {
 <div className='caja-login'>
 <div className="login-container">
         <form method='POST' action='#' onSubmit={verificando}>
-        <h2 className=' text-xl'>Iniciar Sesión Administrador</h2>
+        <h2 className=' text-xl'>Iniciar Sesión</h2>
         <input type="text" placeholder="Usuario" name='usuario' autoComplete="username"  onChange={(e)=>setUsuario(e.target.value)}/>
         <input type="password" placeholder="Contraseña" name='contrasena' autoComplete="current-password"  onChange={(e)=>setContrasena(e.target.value)}/>
         <input type="submit" value='ingresar' className='button'/>

@@ -31,6 +31,7 @@ export async function middleware(req: NextRequest) {
 //PROTECCION DE RUTAS
 export const config = {
     matcher: [
+        '/pages/aula/:path*',
         '/pages/panel',
         '/pages/panel/cursos/:path*',//protege esta ruta todo lo que sigue de la ruta cursos esta protegido con la expresion path
         '/pages/panel/usuarios/:path*',

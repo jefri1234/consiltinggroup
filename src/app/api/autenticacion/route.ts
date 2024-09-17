@@ -14,10 +14,8 @@ export async function POST(request:NextRequest){
         where:{
             usuario:usuario,
             contrasena:contrasena,
-            tipoUser: "admin"
         }
     })
-    console.log(user)
    
     if(user==null){
         return NextResponse.json({
@@ -32,8 +30,9 @@ export async function POST(request:NextRequest){
         const token = jwt.sign({ userId: user.id_usuario, usuario: user.usuario }, SECRET_KEY, { expiresIn: '1h' });
         console.log("token en la api",token)
         return NextResponse.json({
-            message:"ingrso correctamente",
+            message:"ingreso correctamente",
             success:200,
+            alumno:user,
             data:{token} //send token to client
         })
     }
