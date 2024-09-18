@@ -8,6 +8,7 @@ export async function POST(request: NextRequest) {
 const { idcurso } = await request.json();
 
     const identificador = parseInt(idcurso)
+
     const secciones = await prisma.seccion.findMany({
         where: {
             id_curso: identificador
@@ -16,10 +17,16 @@ const { idcurso } = await request.json();
                 materiales: true // Incluir la tabla materiales 
               }
         })
+    
+    const curso = await prisma.curso.findUnique({
+        where: {
+            id_curso: identificador
+        }
+    })
 
-        console.log(secciones)
 return NextResponse.json({
      datos:secciones,
-     id:idcurso
+     id:idcurso,
+     curso:curso
     });
 }

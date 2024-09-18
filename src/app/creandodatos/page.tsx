@@ -7,15 +7,14 @@ const prisma = new PrismaClient();
 //CREANDO UN MATERIAL Y REALIAZAR ASOSIACION DEL CURSO  
 async function main() {
   try {
-    const seccion = await prisma.material.create({
+    const imfo = await prisma.inscripcion.create({
       data: {
-        id_seccion:7,
-        nombre:'REGISTRO_SIMPLIFICADO_SGSST_PEQUENA-EMPRESA',
-        tipo:'xlsm',
-        url:'https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/materiales%20sst/modulo7/REGISTRO_SIMPLIFICADO_SGSST_PEQUENA-EMPRESA%20(1).xlsm?t=2024-09-16T15%3A37%3A41.596Z',
+        id_usuario:1,
+        id_curso:3,
+        fecha_inscripcion:new Date(),
       },
     });
-    console.log('Material creado:', seccion);
+    console.log('Material creado:', imfo);
   } catch (error) {
     console.error('Error al crear la inscripcion:', error);
   }
