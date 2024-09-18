@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import React from 'react';
 import Image from 'next/image';
-
+import FooterEnlaces from '@/app/components/FooterEnlaces';
 // Crear interfaces
 interface CursoParams {
   curso: string;
@@ -11,12 +11,10 @@ interface CursoProps {
   params: CursoParams;
 }
 
-//FILTRAR TODAS LAS SECCIONES QUE TIENE EL CURSO
-
+// FILTRAR TODAS LAS SECCIONES QUE TIENE EL CURSO
 function Curso({ params }: CursoProps) {
   const [secciones, setSecciones] = useState<any[]>([]);  // Guardaremos las secciones aquí
   const [curso, setCurso] = useState("");
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const idcurso = params.curso;
 
@@ -30,57 +28,33 @@ function Curso({ params }: CursoProps) {
     });
     const data = await response.json();
     setSecciones(data.datos);  // Guardar las secciones en el estado
-    setCurso(data.curso.nombre)
-
+    setCurso(data.curso.nombre);
   }, [idcurso]);
 
   useEffect(() => {
     fetchSecciones();
   }, [fetchSecciones]);
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+  console.log(secciones);
+  console.log(curso);
 
-  console.log(secciones)
-  console.log(curso)
-
-  ///////////////////////////////////////////////////////////////////////////
   return (
-    <div className='bg-gray-950 h-screen'>
-      <div className=' mx-auto pt-7  bg-gray-950 h-fit '>
+    <div className='bg-gray-950 h-full '>
+      <div className='mx-auto pt-7 bg-gray-950 h-fit '>
         <div className='bg-gray-900 rounded-lg p-4 shadow-md px-10 mx-10 mb-10'>
-          <h2 className=' text-red-700 text-2xl font-bold flex items-center gap-2'><Image src="/iconos/icon-course.png" alt="icono" width={50} height={50} /> || {curso}</h2>
+          <h2 className='text-red-700 text-2xl font-bold flex items-center gap-2'>
+            <Image src="/iconos/icon-course.png" alt="icono" width={50} height={50} /> || {curso}
+          </h2>
         </div>
-        <div className="max-w-5xl mx-auto border-2 border-gray-400 rounded-lg h-full">
-          {secciones.map((seccion, index) => (
-            <div key={seccion.id_seccion} className="border-b border-gray-200 bg-gray-900 ">
-              <button
-                onClick={() => toggleAccordion(index)}
-                className="flex items-center justify-between w-full py-5 px-5 font-medium text-left text-gray-500 hover:bg-gray-700 focus:outline-none"
-              >
-                <span className='text-xl text-white'>{seccion.id_seccion}. {seccion.nombre}</span>
-                <svg
-                  className={`w-6 h-6 transition-transform ${activeIndex === index ? 'transform rotate-180' : ''
-                    }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${activeIndex === index ? 'max-h-96' : 'max-h-0'
-                  }`}
-              >
-                <div className="p-5 text-white ">
-                  {/* Contenido del acordeón */}
+        <div className="w-max-2xl m-10  border- rounded-lg h-full flex flex-col gap-3">
+          {secciones.map((seccion) => (
+            <div key={seccion.id_seccion} className=" bg-gray-900 rounded-lg  hover:bg-gray-800">
+              <div className="p-5 text-white">
+                <span className='text-xl'>{seccion.id_seccion}. {seccion.nombre}</span>
+                <div className="mt-3">
                   {seccion.materiales.map((material: any, materialIndex: number) => (
                     <div key={materialIndex} className='flex gap-2 mb-5 items-center'>
-                      <p className='gap-5 '>* {material.nombre}</p>
-
+                      <p className='gap-5'>* {material.nombre}</p>
                       {['video', 'imagen', 'pdf', 'docx', 'xlsx', 'pptx', 'pptm', 'txt', 'xlsm', 'xls', 'pptx'].includes(material.tipo.toLowerCase()) && (
                         <a
                           href={material.url}
@@ -102,16 +76,13 @@ function Curso({ params }: CursoProps) {
                           case 'docx':
                             return <i className="fas fa-file-word mr-2"><Image src="/iconos/word.png" alt="word" width={40} height={40} /></i>;
                           case 'xlsm':
-                            return <i className="fas fa-file-excel mr-2"><Image src="/iconos/xls.png" alt="excel" width={40} height={40} /></i>;
                           case 'xlsx':
                             return <i className="fas fa-file-excel mr-2"><Image src="/iconos/xls.png" alt="excel" width={40} height={40} /></i>;
                           case 'pptx':
-                            return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/powertPoint.png" alt="pptx" width={40} height={40} /></i>;
                           case 'pptm':
-                            return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/powertPoint.png" alt="pptm" width={40} height={40} /></i>;
+                            return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/powertPoint.png" alt="pptx" width={40} height={40} /></i>;
                           case 'txt':
                             return <i className="fas fa-file-text mr-2"><Image src="/iconos/txt.png" alt="txt" width={40} height={40} /></i>;
-
                           default:
                             return null;
                         }
@@ -125,6 +96,7 @@ function Curso({ params }: CursoProps) {
         </div>
       </div>
       {secciones.length === 0 && <div className='text-white text-center text-2xl pt-10'>No hay secciones</div>}
+      <FooterEnlaces className='pt-40' />
     </div>
   );
 }

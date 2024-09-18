@@ -3,6 +3,7 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import FooterEnlaces from '@/app/components/FooterEnlaces';
 
 const Aula: React.FC = () => {
   const searchParams = useSearchParams();
@@ -68,7 +69,7 @@ const Aula: React.FC = () => {
 
 
   return (
-    <div className="p-4 bg-gray-950 h-screen text-white">
+    <div className="py-10 bg-gray-950 h-screen text-white">
       <h1 className="text-2xl mb-4 ml-6 bg-gray-900 rounded-lg p-4 font-bold text-red-700 flex items-center gap-2"><Image src="/iconos/icon-profile.png" width={50} height={50} alt="logo" /> {nombre.toUpperCase()} {apellido.toUpperCase()}</h1>
       <div className="shadow-md rounded-lg p-4">
         {/* Validamos que cursos esté definido y sea un array antes de usar length */}
@@ -98,7 +99,9 @@ const Aula: React.FC = () => {
           <p className="flex justify-center items-center">Cursos no encontrados.</p>
         )}
       </div>
+      <FooterEnlaces className='pt-40' />
     </div>
+    
   );
 };
 

@@ -2,9 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function FooterEnlaces() {
+function FooterEnlaces({className}: {className: string}) {
   return (
-    <footer className="bg-gray-950 text-white py-20">
+
+    <footer className={`bg-gray-950 text-white py-20 w-full ${className}`}>
       <div className="mx-auto max-w-screen-xl px-4">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
