@@ -25,17 +25,17 @@ model User{
 
 model Curso {
   id_curso          Int          @id @default(autoincrement())
-  nombre      String       @unique
-  description String
-  Instructor  String
-  duracion    String
-  imagen      String?
-  secciones     Seccion[]
-  inscripciones Inscripcion[]
-  
+  nombre            String       @unique
+  description       String
+  duracion          String
+  imagen            String?
+  secciones         Seccion[]
+  inscripciones     Inscripcion[]
+  profesor          Profesor?      @relation(fields: [id_profesor], references: [id_profesor])
+  id_profesor       Int?           @unique // Esto garantiza que cada profesor solo pueda estar relacionado a un curso
   @@map("curso")
-
 }
+
 model Seccion {
   id_seccion    Int         @id @default(autoincrement())
   id_curso      Int
@@ -70,4 +70,16 @@ model Inscripcion {
   @@unique([id_usuario, id_curso])
   
   @@map("inscripcion")
+}
+
+model Profesor {
+  id_profesor       Int          @id @default(autoincrement())
+  nombre            String
+  apellido          String
+  email             String       @unique
+  linkedin          String?
+  telefono          String?
+  descripcion       String?
+  curso             Curso?       @relation // Campo inverso para la relación de uno a uno
+  @@map("profesor")
 }

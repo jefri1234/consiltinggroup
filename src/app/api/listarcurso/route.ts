@@ -18,12 +18,14 @@ export async function POST(request: NextRequest) {
         id_usuario: userfound
       },
       include: {
-        curso: true // Incluir detalles del curso en la respuesta
-      }
+        curso: true 
+      },
+      
     });
 
     // Extraer solo los detalles de los cursos
     const cursosDetails = cursos.map(inscripcion => inscripcion.curso);
+
 
     // Retornar la respuesta con los detalles de los cursos
     console.log(cursosDetails)

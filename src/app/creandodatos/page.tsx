@@ -7,11 +7,14 @@ const prisma = new PrismaClient();
 //CREANDO UN MATERIAL Y REALIAZAR ASOSIACION DEL CURSO  
 async function main() {
   try {
-    const imfo = await prisma.inscripcion.create({
+    const imfo = await prisma.user.create({
       data: {
-        id_usuario:1,
-        id_curso:3,
-        fecha_inscripcion:new Date(),
+        tipoUser: 'estudiante',
+        usuario: 'ssoma2020',
+        nombre: 'SOMA ',
+        apellido: 'SOMA ',  
+        contrasena: 'consulting',
+        telefono: '99999999',
       },
     });
     console.log('Material creado:', imfo);

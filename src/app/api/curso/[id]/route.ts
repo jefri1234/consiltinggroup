@@ -16,7 +16,7 @@ export async function GET(request:NextRequest , {params}:{params:Params}){
     const curso = await prisma.curso.findUnique(
         {
             where:{
-                id:Number(params.id)
+                id_curso:Number(params.id)
             }
         }
     )
@@ -35,7 +35,7 @@ export async function PUT(request: NextRequest, { params }: { params: Params }) 
 
         // Actualizar el usuario en la base de datos
         const cursoUpdate = await prisma.curso.update({
-            where: { id: Number(params.id) },
+            where: { id_curso: Number(params.id) },
             data: data
         });
 
