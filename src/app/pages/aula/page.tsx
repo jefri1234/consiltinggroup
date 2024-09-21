@@ -44,7 +44,7 @@ const Aula: React.FC = () => {
           'Content-Type': 'application/json',
         },
       });
-      return await response.json(); 
+      return await response.json();
     } catch (error) {
       console.error("Error fetching profesor:", error);
       return {};
@@ -61,7 +61,6 @@ const Aula: React.FC = () => {
           const idprofe = cursosData[0].id_profesor;
           const profeData = await fetchProfesor(idprofe);
           setInfoProfe(profeData);
-          console.log("imfo del profe", profeData)
         }
       }
 
@@ -75,9 +74,10 @@ const Aula: React.FC = () => {
   if (loading) {
     return <div className="bg-gray-900 text-white flex justify-center items-center h-screen text-2xl">Cargando...</div>;
   }
+  console.log("info del profe", infoProfe)
 
   return (
-    <div className="py-10 bg-gray-950 h-screen text-white">
+    <div className="py-10 bg-gray-950 h-max text-white">
       <h1 className="text-1xl mb-4 ml-6 bg-gray-900 rounded-lg p-4 font-bold text-red-700 flex items-center gap-2">
         <Image src="/iconos/icon-profile.png" width={50} height={50} alt="logo" />
         {cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}
@@ -86,27 +86,45 @@ const Aula: React.FC = () => {
         {Array.isArray(cursos) && cursos.length > 0 ? (
           <div>
             {cursos.map((curso, index) => (
-              <div className='flex justify-evenly gap-24' key={index}>
-                <Link href={'/pages/aula/' + curso.id_curso}>
-                  <div className="bg-gray-900 rounded-lg max-w-7xl shadow-md hover:bg-gray-800 text-white">
+              <div className='flex justify-evenly gap-20' key={index}>
+                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg  shadow-md hover:bg-gray-800 text-white w-1/2 h-min'>
+                  <div>
                     <Image
+
                       src={curso.imagen}
                       width={600}
                       height={600}
                       alt="foto"
-                      className="w-full h-50 object-cover"
                     />
                     <div className="p-4">
                       <h2 className="text-1xl font-semibold mb-2">{curso.nombre}</h2>
-                      <p className="mb-2">Instructor: {curso.Instructor}</p>
                       <p className="font-bold">Duración del curso: {curso.duracion}</p>
+                      <p className="font-bold text-blue-500 pt-2">Ver contenido</p>
                     </div>
                   </div>
+
+
+
                 </Link>
-                <div className='pt-5 max-w-7xl'>
-                  <h1 className='text-3xl font-semibold mb-2'>{curso.nombre}</h1>
-                  <p>{curso.description}</p>
+
+                <div className='flex justify-evenly gap-10 flex-col w-full'>      
+                  <div className='pt-5 max-w-7xl'>
+                    <h1 className='text-2xl font-semibold mb-2'>{curso.nombre}</h1>
+                    <p>{curso.description}</p>
+                  </div>
+                  <div className='flex items-center gap-2'>
+                  <Image src='/iconos/icon-docente.png' width={40} height={40} alt="foto"  />
+                  <p className='text-xl font-semibold'>Docente Asignado</p>
+                  </div>
+
+                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl'>
+                    <h1 className='text-1xl font-semibold mb-2 text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
+                    <p>{infoProfe.descripcion}</p>
+                    <p>{infoProfe.email}</p>
+                    <p>Mas informacion: <span className='text-blue-500 select-text'>{infoProfe.linkedin}</span></p>
+                  </div>
                 </div>
+
               </div>
             ))}
           </div>

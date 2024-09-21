@@ -13,9 +13,9 @@ const Navbar = () => {
 
   return (
     <MagicMotion>
-      <nav className="bg-red-900 text-white p-4">
+      <nav className="bg-red-900 text-white p-3">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-white text-lg font-bold flex items-center">
+          <div className="text-white  flex items-center">
             <Image
               src='/img/logorectangulo.jpg'
               alt="logo"
