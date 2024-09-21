@@ -46,11 +46,13 @@ function Curso({ params }: CursoProps) {
             <Image src="/iconos/icon-course.png" alt="icono" width={50} height={50} /> || {curso}
           </h2>
         </div>
-        <div className="w-max-2xl m-10  border- rounded-lg h-full flex flex-col gap-3">
-          {secciones.map((seccion) => (
+        <h1 className='text-red-700  font-sans text-2xl font-bold flex items-center gap-2 mx-10'>||  SECCIONES DEL DIPLOMADO</h1>
+        <div className="w-1/2 m-10  border- rounded-lg h-full flex flex-col gap-3">
+          {secciones.map((seccion) => (            
             <div key={seccion.id_seccion} className=" bg-gray-900 rounded-lg  hover:bg-gray-800">
               <div className="p-5 text-white">
                 <span className='text-xl'>{seccion.id_seccion}. {seccion.nombre}</span>
+                <p className='text-xl text-blue-400'>{seccion.descripcion}</p>
                 <div className="mt-3">
                   {seccion.materiales.map((material: any, materialIndex: number) => (
                     <div key={materialIndex} className='flex gap-2 mb-5 items-center'>
