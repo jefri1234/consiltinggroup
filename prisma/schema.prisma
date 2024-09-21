@@ -80,6 +80,7 @@ model Profesor {
   linkedin          String?
   telefono          String?
   descripcion       String?
+  imagen            String?
   curso             Curso?       @relation // Campo inverso para la relación de uno a uno
   @@map("profesor")
 }

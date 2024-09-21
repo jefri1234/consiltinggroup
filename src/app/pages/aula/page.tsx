@@ -78,10 +78,15 @@ const Aula: React.FC = () => {
 
   return (
     <div className="py-10 bg-gray-950 h-max text-white">
-      <h1 className="text-1xl mb-4 ml-6 bg-gray-900 rounded-lg p-4 font-bold text-red-700 flex items-center gap-2">
-        <Image src="/iconos/icon-profile.png" width={50} height={50} alt="logo" />
-        {cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}
+      <h1 className="text-1xl mb-4 mx-6 bg-gray-900 rounded-lg p-4 font-bold text-red-700 flex items-center gap-2">
+        <Image src="/iconos/icon-course.png" width={50} height={50} alt="logo" />
+        <span>||</span>
+        <p className='text-red-700 text-2xl'>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
       </h1>
+
+
+
+
       <div className="shadow-md rounded-lg px-20">
         {Array.isArray(cursos) && cursos.length > 0 ? (
           <div>
@@ -107,19 +112,23 @@ const Aula: React.FC = () => {
 
                 </Link>
 
-                <div className='flex justify-evenly gap-10 flex-col w-full'>      
+                <div className='flex justify-evenly gap-10 flex-col w-full'>
                   <div className='pt-5 max-w-7xl'>
                     <h1 className='text-2xl font-semibold mb-2'>{curso.nombre}</h1>
                     <p>{curso.description}</p>
                   </div>
                   <div className='flex items-center gap-2'>
-                  <Image src='/iconos/icon-docente.png' width={40} height={40} alt="foto"  />
-                  <p className='text-xl font-semibold'>Docente Asignado</p>
+                    <Image src='/iconos/icon-docente.png' width={40} height={40} alt="foto" />
+                    <p className='text-xl font-semibold'>Docente Asignado</p>
                   </div>
 
-                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl'>
-                    <h1 className='text-1xl font-semibold mb-2 text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
+                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl '>
+                    <div className='flex items-center gap-4 py-2 '>
+                      <Image src={infoProfe.imagen} width={80} height={80} alt="foto" className='rounded-full' />
+                      <h1 className='text-2xl font-semibold mb-2 text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
+                    </div>
                     <p>{infoProfe.descripcion}</p>
+
                     <p>{infoProfe.email}</p>
                     <p>Mas informacion: <span className='text-blue-500 select-text'>{infoProfe.linkedin}</span></p>
                   </div>
