@@ -57,7 +57,7 @@ const Home = () => {
         />
     </Link>
     <Agradecimiento/>
-    <FooterEnlaces />    
+    <FooterEnlaces className='pt-20'/>    
     </>
   );
 };
