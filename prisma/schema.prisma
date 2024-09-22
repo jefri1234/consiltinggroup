@@ -3,85 +3,85 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-//relacion de UNO A MUCHOS
+model User {
+  id_usuario     Int           @id @default(autoincrement())
+  tipoUser       String?       @default("estudiante")
+  usuario        String
+  nombre         String
+  apellido       String
+  contrasena     String
+  telefono       String
+  fecha_registro DateTime      @default(now())
+  inscripciones  Inscripcion[]
 
-model User{
-  id_usuario Int @id @default(autoincrement())
-  tipoUser String?  @default("estudiante")
-  usuario String
-  nombre String
-  apellido String
-  contrasena String
-  telefono String
-  fecha_registro DateTime    @default(now())
-  inscripciones Inscripcion[]
-  
   @@map("usuario")
 }
 
 model Curso {
-  id_curso          Int          @id @default(autoincrement())
-  nombre            String       @unique
-  description       String
-  duracion          String
-  imagen            String?
-  secciones         Seccion[]
-  inscripciones     Inscripcion[]
-  profesor          Profesor?      @relation(fields: [id_profesor], references: [id_profesor])
-  id_profesor       Int?           @unique // Esto garantiza que cada profesor solo pueda estar relacionado a un curso
+  id_curso      Int           @id @default(autoincrement())
+  nombre        String        @unique
+  description   String
+  duracion      String
+  imagen        String?
+  id_profesor   Int?          @unique
+  profesor      Profesor?     @relation(fields: [id_profesor], references: [id_profesor])
+  inscripciones Inscripcion[]
+  secciones     Seccion[]
+
   @@map("curso")
 }
 
 model Seccion {
-  id_seccion    Int         @id @default(autoincrement())
-  id_curso      Int
-  nombre        String
-  descripcion   String?
-  fecha_inicio  DateTime?
-  fecha_fin     DateTime?
-  curso         Curso       @relation(fields: [id_curso], references: [id_curso])
-  materiales    Material[]
-  
+  id_seccion   Int        @id @default(autoincrement())
+  id_curso     Int
+  nombre       String
+  descripcion  String?
+  fecha_inicio DateTime?
+  fecha_fin    DateTime?
+  materiales   Material[]
+  curso        Curso      @relation(fields: [id_curso], references: [id_curso])
+
   @@map("seccion")
 }
 
 model Material {
-  id_material        Int    @id @default(autoincrement())
-  id_seccion Int
-  nombre    String
-  tipo      String
-  url       String
-  seccion       Seccion     @relation(fields: [id_seccion], references: [id_seccion])
-  
+  id_material Int     @id @default(autoincrement())
+  id_seccion  Int
+  nombre      String
+  tipo        String
+  url         String
+  seccion     Seccion @relation(fields: [id_seccion], references: [id_seccion])
+
   @@map("material")
 }
+
 model Inscripcion {
-  id_inscripcion Int      @id @default(autoincrement())
-  id_usuario     Int
-  id_curso       Int
+  id_inscripcion    Int      @id @default(autoincrement())
+  id_usuario        Int
+  id_curso          Int
   fecha_inscripcion DateTime @default(now())
-  usuario        User   @relation(fields: [id_usuario], references: [id_usuario])
-  curso          Curso     @relation(fields: [id_curso], references: [id_curso])
-  
+  curso             Curso    @relation(fields: [id_curso], references: [id_curso])
+  usuario           User     @relation(fields: [id_usuario], references: [id_usuario])
+
   @@unique([id_usuario, id_curso])
-  
   @@map("inscripcion")
 }
 
 model Profesor {
-  id_profesor       Int          @id @default(autoincrement())
-  nombre            String
-  apellido          String
-  email             String       @unique
-  linkedin          String?
-  telefono          String?
-  descripcion       String?
-  imagen            String?
-  curso             Curso?       @relation // Campo inverso para la relación de uno a uno
+  id_profesor Int     @id @default(autoincrement())
+  nombre      String
+  apellido    String
+  email       String  @unique
+  linkedin    String?
+  telefono    String?
+  descripcion String?
+  imagen      String?
+  curso       Curso?
+
   @@map("profesor")
 }
