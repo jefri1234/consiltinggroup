@@ -5,20 +5,21 @@ const prisma = new PrismaClient();
 
 async function createInscripcion() {
   try {
-    const info = await prisma.seccion.create({
+    const info = await prisma.material.create({
       data: {
+        id_material: 22,
         id_seccion: 8,
-        id_curso: 2,
-        nombre: "IMP L EMENTACIÓN Y AUDITORIA DE SGSST BASADO EN LA I SO 45001:2018",
-        descripcion: "Revisión de la Norma ISO 45001, Contexto de la Organización, Liderazgo y Participación de los Trabajadores, Planificación, Apoyo, Operación, Evaluación del Desempeño.",
-        fecha_inicio: new Date(),
-        fecha_fin: new Date(),
+        nombre: "Norma ISO 45001",
+        tipo: "pptx",
+        url: "https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/materiales%20sst/modulo8/Norma_ISO_45001.pptx",
       },
     });
-    console.log('Inscripción creada:', info);
-  } catch (error) {
-    console.error('Error al crear la inscripción:', error);
-  } finally {
+    console.log('Material creado:', info);
+  } 
+  catch (error) {
+    console.error('Error al crear el material:', error);
+  } 
+  finally {
     await prisma.$disconnect();
   }
 }
@@ -28,7 +29,7 @@ function CreaDatos() {
 
   return (
     <div>
-      Creando inscripción...
+      Creando material...
     </div>
   );
 }
