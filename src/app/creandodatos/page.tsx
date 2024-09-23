@@ -5,10 +5,14 @@ const prisma = new PrismaClient();
 
 async function createInscripcion() {
   try {
-    const info = await prisma.inscripcion.create({
+    const info = await prisma.seccion.create({
       data: {
-        id_curso: 1,
-        id_usuario: 1,
+        id_seccion: 8,
+        id_curso: 2,
+        nombre: "IMP L EMENTACIÓN Y AUDITORIA DE SGSST BASADO EN LA I SO 45001:2018",
+        descripcion: "Revisión de la Norma ISO 45001, Contexto de la Organización, Liderazgo y Participación de los Trabajadores, Planificación, Apoyo, Operación, Evaluación del Desempeño.",
+        fecha_inicio: new Date(),
+        fecha_fin: new Date(),
       },
     });
     console.log('Inscripción creada:', info);
@@ -20,7 +24,7 @@ async function createInscripcion() {
 }
 
 function CreaDatos() {
-    createInscripcion();
+  createInscripcion();
 
   return (
     <div>
