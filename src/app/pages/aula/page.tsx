@@ -72,10 +72,12 @@ const Aula: React.FC = () => {
   }, [userfound]);
 
   if (loading) {
-    return <div className="bg-gray-900 text-white flex justify-center items-center h-screen text-2xl">Cargando...</div>;
+    return (
+      <div className='bg-gray-950 h-screen flex items-center justify-center'>
+        <p className='text-white text-2xl'>Cargando...</p>
+      </div>
+    );
   }
-  console.log("info del profe", infoProfe)
-
   return (
     <div className="py-10 bg-gray-950 h-max text-white">
       <h1 className="text-1xl mb-4 mx-6 bg-gray-900 rounded-lg p-4 font-bold text-red-700 flex items-center gap-2">
@@ -83,8 +85,6 @@ const Aula: React.FC = () => {
         <span>||</span>
         <p className='text-red-700 text-2xl'>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
       </h1>
-
-
 
 
       <div className="shadow-md rounded-lg px-20">
