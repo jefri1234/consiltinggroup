@@ -41,6 +41,7 @@ model Seccion {
   id_curso     Int
   nombre       String
   descripcion  String?
+  modulo       Int?
   fecha_inicio DateTime?
   fecha_fin    DateTime?
   materiales   Material[]

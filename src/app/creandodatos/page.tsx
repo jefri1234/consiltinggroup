@@ -5,19 +5,19 @@ const prisma = new PrismaClient();
 
 async function createInscripcion() {
   try {
-    const info = await prisma.material.create({
+    const info = await prisma.seccion.create({
       data: {
-        id_material: 22,
-        id_seccion: 8,
-        nombre: "Norma ISO 45001",
-        tipo: "pptx",
-        url: "https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/materiales%20sst/modulo8/Norma_ISO_45001.pptx",
+        id_curso: 1,
+        nombre: "Política y Organización del Sistema de Gestión en Seguridad y Salud en el Trabajo de Acuerdo A La Ley 29783.",
+        descripcion: "Descripcion de la seccion 1 curso ssoma",
+        fecha_inicio: new Date(),
+        fecha_fin: new Date(),
       },
     });
-    console.log('Material creado:', info);
+    console.log('Seccion creada:', info);
   } 
   catch (error) {
-    console.error('Error al crear el material:', error);
+    console.error('Error al crear la seccion:', error);
   } 
   finally {
     await prisma.$disconnect();
