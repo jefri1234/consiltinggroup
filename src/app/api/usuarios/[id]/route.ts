@@ -16,7 +16,7 @@ export async function GET(request:NextRequest , {params}:{params:Params}){
     const user = await prisma.user.findUnique(
         {
             where:{
-                id:Number(params.id)
+                id_usuario:Number(params.id)
             }
         }
     )
@@ -35,7 +35,7 @@ export async function PUT(request: NextRequest, { params }: { params: Params }) 
 
         // Actualizar el usuario en la base de datos
         const UserUpdate = await prisma.user.update({
-            where: { id: Number(params.id) },
+            where: { id_usuario: Number(params.id) },
             data: data
         });
 
