@@ -28,7 +28,6 @@ export async function POST(request: NextRequest) {
         data: {
           nombre,
           description,
-          Instructor,
           duracion
         },
       });
