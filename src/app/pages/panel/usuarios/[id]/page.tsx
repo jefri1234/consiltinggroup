@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-function page({ params }: { params: { id: string } }) {
+function Page({ params }: { params: { id: string } }) {
 
   const [usuario, setUsuario] = useState('')
   const [nombre, setNombre] = useState('')
@@ -139,4 +139,4 @@ function page({ params }: { params: { id: string } }) {
   )
 }
 
-export default page
+export default Page
