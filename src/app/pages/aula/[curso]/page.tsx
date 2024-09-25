@@ -69,7 +69,7 @@ function Curso({ params }: CursoProps) {
                     {seccion.materiales.map((material: any, materialIndex: number) => (
                       <div key={materialIndex} className='flex gap-2 mb-5 items-center'>
                         <p className='gap-5'>* {material.nombre}</p>
-                        {['video', 'imagen', 'pdf', 'docx', 'xlsx', 'pptx', 'pptm', 'txt', 'xlsm', 'xls', 'pptx'].includes(material.tipo.toLowerCase()) && (
+                        {['video', 'imagen', 'pdf', 'docx', 'xlsx', 'pptx', 'pptm', 'txt', 'xlsm', 'xls', 'pptx','zip'].includes(material.tipo.toLowerCase()) && (
                           <a
                             href={material.url}
                             target='_blank'
@@ -97,6 +97,8 @@ function Curso({ params }: CursoProps) {
                               return <i className="fas fa-file-powerpoint mr-2"><Image src="/iconos/powertPoint.png" alt="pptx" width={40} height={40} /></i>;
                             case 'txt':
                               return <i className="fas fa-file-text mr-2"><Image src="/iconos/txt.png" alt="txt" width={40} height={40} /></i>;
+                            case 'zip':
+                              return <i className="fas fa-file-text mr-2"><Image src="/iconos/icon-carpeta.png" alt="txt" width={40} height={40} /></i>;
                             default:
                               return null;
                           }
