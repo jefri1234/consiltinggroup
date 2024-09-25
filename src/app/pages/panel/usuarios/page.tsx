@@ -46,8 +46,8 @@ async function page() {
           <tbody>
             {
               usuarios.map((user) => (
-                <tr className="border-b" key={user.id}>
-                  <td className="py-2 px-4">{user.id}</td>
+                <tr className="border-b" key={user.id_usuario}>
+                  <td className="py-2 px-4">{user.id_usuario}</td>
                   <td className="py-2 px-4">{user.tipoUser}</td>
                   <td className="py-2 px-4">{user.usuario}</td>
                   <td className="py-2 px-4">{user.nombre}</td>
@@ -56,7 +56,7 @@ async function page() {
                   <td className="py-2 px-4">{user.telefono}</td>
                   <td className="py-2 px-4">
 
-                    <Link href={`/pages/panel/usuarios/${user.id}`} className="px-3 py-2 bg-blue-600 my-3 inline-block rounded-lg text-white font-bold mr-2">
+                    <Link href={`/pages/panel/usuarios/${user.id_usuario}`} className="px-3 py-2 bg-blue-600 my-3 inline-block rounded-lg text-white font-bold mr-2">
                       editar
                     </Link>
                     <Link href='#' className="px-3 py-2 bg-red-600 my-3 inline-block rounded-lg text-white font-bold">
