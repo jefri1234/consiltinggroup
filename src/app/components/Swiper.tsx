@@ -1,8 +1,9 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -36,31 +37,31 @@ export default function EfectoSwiper() {
         className="mySwiper"
       >
         <SwiperSlide >
-          <img src="/img/people2.jpg" className='imagen-swiper'/>
+          <Image src="/img/people2.jpg" className='imagen-swiper' alt='foto' width={300} height={300}/>
           <h2 className='textos'>Especialista en RRHH</h2>
         </SwiperSlide>
         <SwiperSlide > 
-          <img src="/img/people1.jpg" className='imagen-swiper'/>
+          <Image src="/img/people1.jpg" className='imagen-swiper' alt='foto' width={300} height={300}/>
           <h2 className='textos'>Especialista en SST</h2>
         </SwiperSlide>
         <SwiperSlide >
-          <img src="/img/people3.jpg" className='imagen-swiper'/>
+          <Image src="/img/people3.jpg" className='imagen-swiper' alt='foto' width={300} height={300}/>
           <h2 className='textos'>Especialista en SIAF</h2>
         </SwiperSlide>
         <SwiperSlide >
-          <img src="/img/people4.jpg" className='imagen-swiper'/>
+          <Image src="/img/people4.jpg" className='imagen-swiper' alt='foto' width={300} height={300}/>
           <h2 className='textos'>Especialista en Gestion Publica Municipal</h2>
         </SwiperSlide>
         <SwiperSlide >
-          <img src="/img/people5.jpg" className='imagen-swiper'/>
+          <Image src="/img/people5.jpg" className='imagen-swiper' alt='foto' width={300} height={300}/>
           <h2 className='textos'>Especialista en Trabajos de Alto Riesgo</h2>
         </SwiperSlide>
         <SwiperSlide >
-          <img src="/img/people6.jpg" className='imagen-swiper'/>
+          <Image src="/img/people6.jpg" className='imagen-swiper' alt='foto' width={300} height={300}/>
           <h2 className='textos'>Especialista en Auditoria Tributaria</h2>
         </SwiperSlide>
         <SwiperSlide >
-          <img src="/img/people7.jpg" className='imagen-swiper'/>
+          <Image src="/img/people7.jpg" className='imagen-swiper' alt='foto' width={300} height={300}/>
           <h2 className='textos'>Especialista en SSOMA</h2>
         </SwiperSlide>
 
