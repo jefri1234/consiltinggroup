@@ -28,7 +28,6 @@ export async function POST(request: NextRequest) {
 
 
     // Retornar la respuesta con los detalles de los cursos
-    console.log(cursosDetails)
     return NextResponse.json(cursosDetails);
   } 
 

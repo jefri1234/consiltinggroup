@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterEnlaces from '@/app/components/FooterEnlaces';
@@ -63,8 +63,6 @@ const Aula: React.FC = () => {
           setInfoProfe(profeData);
         }
       }
-
-
       setLoading(false);
     };
 
@@ -78,6 +76,7 @@ const Aula: React.FC = () => {
       </div>
     );
   }
+
   return (
     <div className="py-10 bg-gray-950 h-max text-white">
       <h1 className="text-1xl mb-4 mx-6 bg-gray-900 rounded-lg p-4 font-bold text-red-700 flex items-center gap-2">
@@ -86,30 +85,20 @@ const Aula: React.FC = () => {
         <p className='text-red-700 text-2xl'>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
       </h1>
 
-
       <div className="shadow-md rounded-lg px-20">
         {Array.isArray(cursos) && cursos.length > 0 ? (
           <div>
             {cursos.map((curso, index) => (
               <div className='flex justify-evenly gap-20' key={index}>
-                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg  shadow-md hover:bg-gray-800 text-white w-1/2 h-min'>
+                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg shadow-md hover:bg-gray-800 text-white w-1/2 h-min'>
                   <div>
-                    <Image
-
-                      src={curso.imagen}
-                      width={600}
-                      height={600}
-                      alt="foto"
-                    />
+                    <Image src={curso.imagen} width={600} height={600} alt="foto" />
                     <div className="p-4">
                       <h2 className="text-1xl font-semibold mb-2">{curso.nombre}</h2>
                       <p className="font-bold">Duración del curso: {curso.duracion}</p>
                       <p className="font-bold text-blue-500 pt-2">Ver contenido</p>
                     </div>
                   </div>
-
-
-
                 </Link>
 
                 <div className='flex justify-evenly gap-10 flex-col w-full'>
@@ -122,18 +111,16 @@ const Aula: React.FC = () => {
                     <p className='text-xl font-semibold'>Docente Asignado</p>
                   </div>
 
-                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl '>
-                    <div className='flex items-center gap-4 py-2 '>
+                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl'>
+                    <div className='flex items-center gap-4 py-2'>
                       <Image src={infoProfe.imagen} width={80} height={80} alt="foto" className='rounded-full' />
                       <h1 className='text-2xl font-semibold mb-2 text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
                     </div>
                     <p>{infoProfe.descripcion}</p>
-
                     <p>{infoProfe.email}</p>
-                    <p>Mas informacion: <span className='text-blue-500 select-text'>{infoProfe.linkedin}</span></p>
+                    <p>Más información: <span className='text-blue-500 select-text'>{infoProfe.linkedin}</span></p>
                   </div>
                 </div>
-
               </div>
             ))}
           </div>
@@ -146,4 +133,12 @@ const Aula: React.FC = () => {
   );
 };
 
-export default Aula;
+// Componente de página con Suspense
+export default function AulaPage() {
+  return (
+    <React.Suspense fallback={<div>Cargando...</div>}>
+      <Aula />
+    </React.Suspense>
+  );
+}
+

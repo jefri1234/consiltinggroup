@@ -14,7 +14,6 @@ export async function POST(request: NextRequest) {
         !Instructor ||
         !duracion
       ) {
-        console.log("erro al crear el curso")
         return NextResponse.json(
           {
             message: "Todos los campos son obligatorios.",

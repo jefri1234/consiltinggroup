@@ -19,7 +19,6 @@ export async function POST(request: NextRequest) {
       }
     });
 
-    console.log("informacion del profesor", profe)
     return NextResponse.json(profe);
   } 
 

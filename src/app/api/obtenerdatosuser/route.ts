@@ -6,7 +6,6 @@ const prisma = new PrismaClient();
 export async function POST(request:NextRequest ){
     
     const {userfound} = await request.json()
-    console.log("api obtener usuario veo el id de usuario:",userfound)
     const user = await prisma.user.findUnique(
         {
             where:{
