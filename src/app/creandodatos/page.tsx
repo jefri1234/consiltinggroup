@@ -7,11 +7,11 @@ async function createInscripcion() {
   try {
     const info = await prisma.material.create({
       data: {
-        id_material:24,
-        id_seccion:9,
-        nombre:"MATERIAL DE LECTURA DEL 1ER MODULO",
+        id_material:40,
+        id_seccion:16,
+        nombre:"MATERIAL DE LECTURA",
         tipo:"zip",
-        url:"https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/materiales%20ssoma/modulo1/MATERIAL%20DE%20LECTURA%20DEL%201ER%20MODULO.zip?t=2024-09-25T00%3A25%3A35.042Z"
+        url:"https://twbfauzwuasnjnaxywlp.supabase.co/storage/v1/object/public/materiales%20ssoma/modulo8/MATERIAL%20DE%20LECTURA.zip"
       },
     });
     console.log('Seccion creada:', info);
