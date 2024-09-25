@@ -41,15 +41,14 @@ async function Cursos() {
         <tbody>
           {
           cursos.map((curso)=>(
-          <tr className="border-b" key={curso.id}>
-            <td className="py-2 px-4">{curso.id}</td>
+          <tr className="border-b" key={curso.id_curso}>
+            <td className="py-2 px-4">{curso.id_curso}</td>
             <td className="py-2 px-4">{curso.nombre}</td>
             <td className="py-2 px-4">{curso.description}</td>
-            <td className="py-2 px-4">{curso.Instructor}</td>
             <td className="py-2 px-4">{curso.duracion}</td>
             <td className="py-2 px-4">
               
-              <Link href={`/pages/panel/cursos/${curso.id}`} className="px-3 py-2 bg-blue-600 my-3 inline-block rounded-lg text-white font-bold mr-2">
+              <Link href={`/pages/panel/cursos/${curso.id_curso}`} className="px-3 py-2 bg-blue-600 my-3 inline-block rounded-lg text-white font-bold mr-2">
                 editar
               </Link>
               <Link href='#' className="px-3 py-2 bg-red-600 my-3 inline-block rounded-lg text-white font-bold">
