@@ -60,10 +60,10 @@ function Curso({ params }: CursoProps) {
         <h1 className='text-red-700 font-sans text-2xl font-bold flex items-center gap-2 mx-10'>||  SECCIONES DEL DIPLOMADO</h1>
         {secciones.length > 0 ? (
           <div className="w-1/2 m-10 border- rounded-lg h-full flex flex-col gap-3">
-            {secciones.map((seccion) => (
+            {secciones.map((seccion,index) => (
               <div key={seccion.id_seccion} className="bg-gray-900 rounded-lg hover:bg-gray-800">
                 <div className="p-5 text-white">
-                  <span className='text-xl'>{seccion.id_seccion}. {seccion.nombre}</span>
+                  <span className='text-xl'>{index + 1}. {seccion.nombre}</span>
                   <p className='text-xl text-blue-400'>{seccion.descripcion}</p>
                   <div className="mt-3">
                     {seccion.materiales.map((material: any, materialIndex: number) => (
