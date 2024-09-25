@@ -22,7 +22,7 @@ function Page({ params }: { params: { id: string } }) {
           setContrasena(data.data.contrasena)
           setTelefono(data.data.telefono)
         });
-  }, []);
+  }, [params.id]);
 
 
   const update = async (e:React.FormEvent<HTMLFormElement>)=>{
