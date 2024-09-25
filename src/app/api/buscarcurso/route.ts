@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
   // Buscar el curso cuyo id coincide con el id recibido en el request
   const cursoencontrado = await prisma.curso.findUnique({
     where: {
-      id: parseInt(curso), // Comparar con el campo 'id'
+      id_curso: parseInt(curso), // Comparar con el campo 'id'
     },
   });
 
