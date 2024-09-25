@@ -21,7 +21,8 @@ function EditCurso({ params }: { params: { id: string } }) {
               setInstructor(data.data.Instructor)
               setDuracion(data.data.duracion)
             });
-      }, []);
+      }, [params.id]);//  Agregar params.id como dependencia 
+          //Esto asegurará que el efecto se ejecute nuevamente si params.id cambia.
 
       const actualizar = async (e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
@@ -29,7 +30,7 @@ function EditCurso({ params }: { params: { id: string } }) {
           method:"PUT",
           body:JSON.stringify({nombre,description,Instructor,duracion}),
           headers:{
-            "Content-Type":"apllication/json"
+            "Content-Type":"application/json"
           },
         });
         
