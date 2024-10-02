@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className=" border-gray-200 dark:bg-gray-900">
       <div className=" flex flex-wrap items-center justify-between mx-auto p-1">
-        <Link href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image src="/img/logo-consilting.jpg"  alt="logo-consulting" width={120} height={120} />
         </Link>
         <button
