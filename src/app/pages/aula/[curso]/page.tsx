@@ -59,7 +59,7 @@ function Curso({ params }: CursoProps) {
         </div>
         <h1 className='text-red-700 font-sans text-2xl font-bold flex items-center gap-2 mx-10'>||  SECCIONES DEL DIPLOMADO</h1>
         {secciones.length > 0 ? (
-          <div className="w-1/2 m-10 border- rounded-lg h-full flex flex-col gap-3">
+          <div className=" m-10 border- rounded-lg h-full flex flex-col gap-3">
             {secciones.map((seccion,index) => (
               <div key={seccion.id_seccion} className="bg-gray-900 rounded-lg hover:bg-gray-800">
                 <div className="p-5 text-white">
