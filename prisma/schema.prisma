@@ -86,3 +86,11 @@ model Profesor {
 
   @@map("profesor")
 }
+
+model UserRegistrados{
+  id_user Int @id @default(autoincrement())
+  nombre String
+  apellido String
+  telefono  String
+  email String @unique
+}                     

@@ -1,0 +1,79 @@
+.titulo-diplomado{
+    text-align: center;
+    padding: 2rem 1rem;
+    font-weight: 800;
+    font-size: clamp(10px, 3vw + 1rem, 30px);
+}
+@media (min-width: 600px) {
+    .titulo-diplomado {
+        font-size: 32px; /* Pantallas más anchas */
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .titulo-diplomado {
+        font-size: 40px; /* Pantallas aún más anchas */
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .titulo-diplomado {
+        font-size: 40px; /* Pantallas aún más anchas */
+        max-width: 70%;
+    }
+}
+/* DISEÑO DEl header */
+.header{
+    background-image: url('/img/fondo-agua.jpg');
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    width: 100%;
+    padding: 2em 0em 10em 0em;
+}
+
+/* DISEÑO DEl MAIN */
+
+.contenedor{
+    background-image: url('/img/fondo-agua.jpg');
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 800px) {
+    .contenedor {
+    flex-direction: row;
+    max-height: max-content;
+    justify-content:center;
+    align-items:center;
+    }
+    .contenedor-formulario{
+        padding: 1em;
+        padding-top: 7em;
+    }
+    .formulario{
+        padding: 2em 3em;
+    }
+}
+
+/* DISEÑO DE LOS DETALLES - FECHA - HORA - MEDIO DE CLASE */
+
+@media(min-width:900px){
+    .seccion-item{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        padding-top: 3rem;
+    }
+}
+
