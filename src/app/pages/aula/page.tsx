@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterEnlaces from '@/app/components/FooterEnlaces';
@@ -24,9 +24,7 @@ const Aula: React.FC = () => {
       const response = await fetch('/api/listarcurso', {
         method: 'POST',
         body: JSON.stringify({ userfound: userId }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
       });
       return await response.json();
     } catch (error) {
@@ -40,9 +38,7 @@ const Aula: React.FC = () => {
       const response = await fetch('/api/listarprofesor', {
         method: 'POST',
         body: JSON.stringify({ idprofe }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
       });
       return await response.json();
     } catch (error) {
@@ -81,7 +77,7 @@ const Aula: React.FC = () => {
         <p>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
       </h1>
 
-      <div className="p-5 ">
+      <div className="p-5">
         {Array.isArray(cursos) && cursos.length > 0 ? (
           <div className="flex flex-col lg:flex-row gap-6 bg-gray-800 rounded-lg py-10 px-5">
             {cursos.map((curso, index) => (
@@ -135,4 +131,10 @@ const Aula: React.FC = () => {
   );
 };
 
-export default Aula;
+const AulaWrapper = () => (
+  <Suspense fallback={<div>Cargando...</div>}>
+    <Aula />
+  </Suspense>
+);
+
+export default AulaWrapper;
