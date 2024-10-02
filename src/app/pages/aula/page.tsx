@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
-import React,{ useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterEnlaces from '@/app/components/FooterEnlaces';
@@ -70,75 +70,69 @@ const Aula: React.FC = () => {
   }, [userfound]);
 
   if (loading) {
-    return (
-      <div className='bg-gray-950 h-screen flex items-center justify-center'>
-        <p className='text-white text-2xl'>Cargando...</p>
-      </div>
-    );
+    return <div className="bg-gray-900 text-white flex justify-center items-center h-screen text-2xl">Cargando...</div>;
   }
 
   return (
-    <div className="py-10 bg-gray-950 h-max text-white">
-      <h1 className="text-1xl mb-4 mx-6 bg-gray-900 rounded-lg p-4 font-bold text-red-700 flex items-center gap-2">
+    <div className="py-10 bg-gray-950 text-white">
+      <h1 className="text-2xl mb-6 mx-6 bg-gray-900 rounded-lg p-4 font-bold text-red-600 flex items-center gap-2 shadow-md">
         <Image src="/iconos/icon-course.png" width={50} height={50} alt="logo" />
         <span>||</span>
-        <p className='text-red-700 text-2xl'>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
+        <p>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
       </h1>
 
-      <div className="shadow-md rounded-lg px-20">
+      <div className="p-5 ">
         {Array.isArray(cursos) && cursos.length > 0 ? (
-          <div>
+          <div className="flex flex-col lg:flex-row gap-6 bg-gray-800 rounded-lg py-10 px-5">
             {cursos.map((curso, index) => (
-              <div className='flex justify-evenly gap-20' key={index}>
-                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg shadow-md hover:bg-gray-800 text-white w-1/2 h-min'>
+              <div className='flex flex-col lg:flex-row gap-6' key={index}>
+                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg shadow-md hover:bg-gray-700 text-white w-full lg:w-1/2 transition duration-300 ease-in-out'>
                   <div>
-                    <Image src={curso.imagen} width={600} height={600} alt="foto" />
+                    <Image
+                      src={curso.imagen}
+                      width={600}
+                      height={400}
+                      alt="foto"
+                      className="w-full h-auto rounded-t-lg"
+                    />
                     <div className="p-4">
-                      <h2 className="text-1xl font-semibold mb-2">{curso.nombre}</h2>
-                      <p className="font-bold">Duración del curso: {curso.duracion}</p>
-                      <p className="font-bold text-blue-500 pt-2">Ver contenido</p>
+                      <h2 className="text-xl font-semibold mb-2">{curso.nombre}</h2>
+                      <p className="font-bold text-gray-300">Duración del curso: {curso.duracion}</p>
+                      <p className="font-bold text-blue-400 pt-2">Ver contenido</p>
                     </div>
                   </div>
                 </Link>
 
-                <div className='flex justify-evenly gap-10 flex-col w-full'>
+                <div className='flex flex-col justify-between w-full lg:w-1/2'>
                   <div className='pt-5 max-w-7xl'>
                     <h1 className='text-2xl font-semibold mb-2'>{curso.nombre}</h1>
-                    <p>{curso.description}</p>
+                    <p className="text-gray-300">{curso.description}</p>
                   </div>
-                  <div className='flex items-center gap-2'>
+                  <div className='flex items-center gap-2 mt-4'>
                     <Image src='/iconos/icon-docente.png' width={40} height={40} alt="foto" />
                     <p className='text-xl font-semibold'>Docente Asignado</p>
                   </div>
 
-                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl'>
+                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl shadow-md'>
                     <div className='flex items-center gap-4 py-2'>
                       <Image src={infoProfe.imagen} width={80} height={80} alt="foto" className='rounded-full' />
-                      <h1 className='text-2xl font-semibold mb-2 text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
+                      <h1 className='text-2xl font-semibold text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
                     </div>
-                    <p>{infoProfe.descripcion}</p>
-                    <p>{infoProfe.email}</p>
-                    <p>Más información: <span className='text-blue-500 select-text'>{infoProfe.linkedin}</span></p>
+                    <p className="text-gray-300">{infoProfe.descripcion}</p>
+                    <p className="text-gray-300">{infoProfe.email}</p>
+                    <p className="text-gray-300">Más información: <span className='text-blue-400 cursor-pointer hover:underline'>{infoProfe.linkedin}</span></p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <p className="flex justify-center items-center">Cursos no encontrados.</p>
+          <p className="flex justify-center items-center text-xl">Cursos no encontrados.</p>
         )}
       </div>
-      <FooterEnlaces className='pt-40' />
+      <FooterEnlaces className='pt-10' />
     </div>
   );
 };
 
-// Componente de página con Suspense
-export default function AulaPage() {
-  return (
-    <React.Suspense fallback={<div>Cargando...</div>}>
-      <Aula />
-    </React.Suspense>
-  );
-}
-
+export default Aula;
