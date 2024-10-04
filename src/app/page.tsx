@@ -1,4 +1,3 @@
-
 import Carousel from '@/app/components/Carrusel'
 import Footer from '@/app/components/Footer';
 import Slite1 from '@/app/pageCarrusel/silite1';
@@ -11,53 +10,84 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Agradecimiento from './components/Agradecimiento';
 import FooterEnlaces from './components/FooterEnlaces';
+
 const Home = () => {
   return (
     <>
-      <div >
-        <div className=' bg-red-800 flex justify-center items-center  text-white contenedor-btn-aulaVirtual '>
-            <h1 className="text-center text-3xl p-3 ">
-              Apasionados por lo que hacemos
-            </h1>
-            <Link href="/login" className='boton-aulavirtual '>
-              Ingreso Aula Virtual
-            </Link>
+      <div>
+        {/* Social Media Sidebar */}
+        <div className="fixed right-0 top-1/3 z-50 flex flex-col space-y-2 p-2">
+          <Link href="https://www.facebook.com/groupconsultingperu?mibextid=ZbWKwL" target="_blank" className="bg-blue-600 p-2 rounded-full">
+            <Image src="/redes-sociales/icon-facebook.png" alt="Facebook" width={50} height={50} />
+          </Link>
+          <Link href="https://www.instagram.com/consulting.group.peru?igsh=MWhwbmVodzkwYzc2ZA==" target="_blank" className="bg-pink-600 p-2 rounded-full">
+            <Image src="/redes-sociales/icon-instagram.png" alt="Instagram" width={50} height={50} />
+          </Link>
+          <Link href="https://www.linkedin.com/company/consultinggroup/" target="_blank" className="bg-blue-700 p-2 rounded-full">
+            <Image src="/redes-sociales/icon-linkeding.png" alt="LinkedIn" width={50} height={50} />
+          </Link>
+          <Link href="https://www.tiktok.com/@consulting.group.peru?_t=8oDafwW0FiX&_r=1" target="_blank" className="bg-black p-2 rounded-full">
+            <Image src="/redes-sociales/icon-tiktok.png" alt="TikTok" width={50} height={50} />
+          </Link>
+          <Link href="https://api.whatsapp.com/send?phone=51991403402&text=Hola,%20me%20puedes%20informar%20sobre:" target="_blank" className="bg-green-500 p-2 rounded-full">
+            <Image src="/redes-sociales/icon-watsap.png" alt="WhatsApp" width={50} height={50} />
+          </Link>
+          <Link href="https://youtube.com/@consultinggroup1?si=n7uaZqHQwgAMcyMe" target="_blank" className="bg-red-600 p-2 rounded-full">
+            <Image src="/redes-sociales/icon-youtube.png" alt="YouTube" width={50} height={50} />
+          </Link>
         </div>
 
+        {/* Main Content */}
+        <div className='bg-red-800 flex justify-center items-center text-white contenedor-btn-aulaVirtual'>
+          <h1 className="text-center text-3xl p-3">Apasionados por lo que hacemos</h1>
+          <Link href="/login" className='boton-aulavirtual'>
+            Ingreso Aula Virtual
+          </Link>
+        </div>
 
-          <Carousel >
-              <div className='container-slite'>
-                <Slite1/>
-              </div>
-              <div className='container-slite' >
-                <Slite2/>
-              </div>
-              <div className='container-slite'>
-                <Slite3/>
-              </div>
-            </Carousel>
-
+        <Carousel>
+          <div className='container-slite'>
+            <Slite1 />
+          </div>
+          <div className='container-slite'>
+            <Slite2 />
+          </div>
+          <div className='container-slite'>
+            <Slite3 />
+          </div>
+        </Carousel>
       </div>
+
       <Footer />
-    <h2 className='text-center mt-20 mb-7 text-4xl text-red-700 font-bold'>Nuestras especializaciones para ti</h2>
-    <HomePage />
-    <div className=' text-center'>
-      <h1 className='titulo-swiper pt-7'>Certificate como Especialista</h1>
-      <EfectoSwiper />
-      <h2 className='subtitulo-swiper'>Preparate para trasender en el mundo laboral</h2>
-    </div>
-    <Beneficios/>
-    <Link href='https://api.whatsapp.com/send?phone=51991403402&text=Hola,%20me%20puedes%20informar%20sobre: '>
-    <Image 
-        src='/img/watsap3d.png'
-        width={70}
-        height={70}
-        alt='watsap'
-        className='boton-watsap-estatico'
+
+      <div className='p-5'>
+        <h2 className='text-center mx-auto text-4xl text-white bg-red-800 font-bold max-w-max p-2 rounded-lg' id='diplomados'>
+          Nuestras especializaciones para ti
+        </h2>
+      </div>
+
+      <HomePage />
+
+      <div className='text-center'>
+        <h1 className='titulo-swiper pt-7'>Certificate como Especialista</h1>
+        <EfectoSwiper />
+        <h2 className='subtitulo-swiper'>Preparate para trasender en el mundo laboral</h2>
+      </div>
+
+      <Beneficios />
+
+      {/* <Link href='https://api.whatsapp.com/send?phone=51991403402&text=Hola,%20me%20puedes%20informar%20sobre: '>
+        <Image
+          src='/img/watsap3d.png'
+          width={70}
+          height={70}
+          alt='watsap'
+          className='boton-watsap-estatico'
         />
-    </Link>
-    <Agradecimiento/>
-    <FooterEnlaces className='pt-20'/>    
+      </Link> */}
+
+      <Agradecimiento />
+      <FooterEnlaces className='pt-20' />
     </>
   );
 };

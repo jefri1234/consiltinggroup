@@ -18,10 +18,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" border-gray-200 dark:bg-gray-900">
+    <nav className=" bg-red-800 dark:bg-gray-900">
       <div className=" flex flex-wrap items-center justify-between mx-auto p-1">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/img/logo-consilting.jpg"  alt="logo-consulting" width={120} height={120} />
+          <Image src="/img/logo-consilting.jpg"  alt="logo-consulting" width={120} height={120} className='bg-white p-1 rounded-lg'/>
         </Link>
         <button
           onClick={toggleMenu}
@@ -41,22 +41,22 @@ const Navbar = () => {
               <Link href="/" className="block py-2 px-3 text-black bg-red-800 rounded md:bg-transparent md:text-gray-400 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Inicio</Link>
             </li>
             <li>
-              <Link href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Acerca Nosotros</Link>
+              <Link href="/acerca-nosotros" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Acerca Nosotros</Link>
             </li>
             <li>
-              <Link href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Nuestros servicios</Link>
+              <Link href="/nuestros-servicios" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Nuestros servicios</Link>
             </li>
             <li>
-              <Link href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Diplomados</Link>
+              <Link href="/#diplomados" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Diplomados</Link>
             </li>
             <li>
-              <Link href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Alienzas estrategicas</Link>
+              <Link href="/alianzas-estrategicas" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Alianzas estrategicas</Link>
             </li>
             <li>
-              <Link href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactenos</Link>
+              <Link href="/contactanos" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactanos</Link>
             </li>
             <li>
-              <Link href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sucursales</Link>
+              <Link href="/sucursales" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sucursales</Link>
             </li>
           </ul>
         </div>

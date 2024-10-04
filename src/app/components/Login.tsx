@@ -1,66 +1,71 @@
 "use client"
-import React from 'react'
-import '../login.css'
-import { FormEvent } from 'react';
-import { useState } from 'react'
-import { useRouter } from 'next/navigation';
-
+import React, { FormEvent, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 function Login() {
     const [usuario, setUsuario] = useState('')
     const [contrasena, setContrasena] = useState('')
     const [error, setError] = useState<string | null>(null);
-    const router= useRouter()
-    
-    async function  verificando(e: FormEvent<HTMLFormElement>){
-        e.preventDefault()
-        
-        const res = await fetch('../api/autenticacion',{
-        method:"POST",
-        body:JSON.stringify({usuario,contrasena}),
-        headers:{
-            "Content-Type":"application/json",
-        },
-        })
-        //ALMACENO LO QUE ENVIO LA API 
-        const resultado = await res.json(); 
+    const router = useRouter()
 
-        //VALIDO SI LO QUE VINO DE LA API EL DATA TIENE UN TOKEN
+    async function verificando(e: FormEvent<HTMLFormElement>) {
+        e.preventDefault()
+
+        const res = await fetch('../api/autenticacion', {
+            method: "POST",
+            body: JSON.stringify({ usuario, contrasena }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+
+        const resultado = await res.json();
+
         if (resultado.data?.token) {
-            // Almacenar el token en una cookie segura
             document.cookie = `token=${resultado.data.token}; path=/; secure`;
 
-            if(resultado.alumno.tipoUser==="admin"){
+            if (resultado.alumno.tipoUser === "admin") {
                 router.push('/pages/panel');
-            }
-            else if(resultado.alumno.tipoUser==="estudiante"){
-                router.push(`/pages/aula?userfound=${resultado.alumno.id_usuario}`);
-            }
-            else if(resultado.alumno.tipoUser==="profesor"){
+            } else if (resultado.alumno.tipoUser === "estudiante" || resultado.alumno.tipoUser === "profesor") {
                 router.push(`/pages/aula?userfound=${resultado.alumno.id_usuario}`);
             }
         } else {
-            //no ingreso da mensage error lo que tiene en api
-            console.log(resultado.message);
             setError(resultado.message);
         }
     }
-   
-  return (
-<div className='caja-login'>
-<div className="login-container">
-        <form method='POST' action='#' onSubmit={verificando}>
-        <h2 className=' text-xl'>Iniciar Sesión</h2>
-        <input type="text" placeholder="Usuario" name='usuario' autoComplete="username"  onChange={(e)=>setUsuario(e.target.value)}/>
-        <input type="password" placeholder="Contraseña" name='contrasena' autoComplete="current-password"  onChange={(e)=>setContrasena(e.target.value)}/>
-        <input type="submit" value='ingresar' className='button'/>
-        </form>
-        {error && <p className="error-message text-red-900 text-center  mt-5 font-bold">{error}</p>}
-        <div>
+
+    return (
+        <div className='min-h-screen flex items-center justify-center bg-gray-950'>
+            <div className="w-full max-w-md bg-gray-900 p-8 rounded-lg shadow-lg">
+                <h2 className='text-3xl font-semibold text-white text-center mb-6'>Bienvenido al Aula Virtual</h2>
+                <p className="text-gray-400 text-center mb-4">Ingresa tus datos para acceder al contenido exclusivo</p>
+                <form method='POST' action='#' onSubmit={verificando} className='space-y-4'>
+                    <input
+                        type="text"
+                        placeholder="Usuario"
+                        name='usuario'
+                        autoComplete="username"
+                        onChange={(e) => setUsuario(e.target.value)}
+                        className="w-full p-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Contraseña"
+                        name='contrasena'
+                        autoComplete="current-password"
+                        onChange={(e) => setContrasena(e.target.value)}
+                        className="w-full p-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    />
+                    <input
+                        type="submit"
+                        value='Ingresar'
+                        className='w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-all cursor-pointer'
+                    />
+                </form>
+                {error && <p className="error-message text-red-500 text-center mt-5 font-bold">{error}</p>}
+            </div>
         </div>
-    </div>
-</div>
-)
+    )
 }
 
-export default Login
+export default Login;
