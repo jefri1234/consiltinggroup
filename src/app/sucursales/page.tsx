@@ -10,7 +10,7 @@ const Sucursales: React.FC = () => {
 
       {/* Sección de contenido */}
       <p className="text-center text-lg md:text-xl lg:text-2xl mb-12 text-gray-400">
-        Encuéntranos en nuestras sucursales en todo el país. Nos enorgullece estar más cerca de ti para brindarte la mejor educación y formación profesional. ¡Visítanos hoy mismo!
+        Encuéntranos en nuestras sucursales. Nos enorgullece estar más cerca de ti para brindarte la mejor educación y formación profesional. ¡Visítanos hoy mismo!
       </p>
 
       {/* Sucursales y mapa */}

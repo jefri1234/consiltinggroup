@@ -14,7 +14,7 @@ function Beneficios() {
                                     src='/img/clasepresencial.png'
                                     width={70}
                                     height={70}
-                                    alt=''
+                                    alt='clasepresencial'
                                 />
                             </div>
                             <div>
@@ -45,7 +45,7 @@ function Beneficios() {
                                     src='/img/certificacion.png'
                                     width={70}
                                     height={70}
-                                    alt=''
+                                    alt='certificacion'
                                 />
                             </div>
                             <div>

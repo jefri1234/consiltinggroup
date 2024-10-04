@@ -15,8 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <Head>
+      <meta name="google" content="notranslate" />
         {/* Título de la página */}
         <title>CertificaCursos - Cursos online con certificados</title>
         

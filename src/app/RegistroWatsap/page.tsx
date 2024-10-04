@@ -1,5 +1,7 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 const WhatsAppInvitation: React.FC = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-900">
@@ -13,9 +15,11 @@ const WhatsAppInvitation: React.FC = () => {
         {/* Paso 1 */}
         <div className="mt-6">
           <div className="flex justify-center">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
               alt="WhatsApp"
+              width={100}
+              height={100}
               className="w-16 h-16"
             />
           </div>
