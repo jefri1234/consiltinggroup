@@ -17,11 +17,15 @@ const Navbar = () => {
     setIsOpen((prev) => !prev);
   };
 
+  const handleLinkClick = () => {
+    setIsOpen(false); // Cierra el menú al hacer clic en un enlace
+  };
+
   return (
-    <nav className=" bg-red-800 dark:bg-gray-900">
-      <div className=" flex flex-wrap items-center justify-between mx-auto p-1">
+    <nav className="bg-red-800 dark:bg-gray-900">
+      <div className="flex flex-wrap items-center justify-between mx-auto p-1">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/img/logo-consilting.jpg"  alt="logo-consulting" width={120} height={120} className='bg-white p-1 rounded-lg'/>
+          <Image src="/img/logo-consilting.jpg" alt="logo-consulting" width={120} height={120} className='bg-white p-1 rounded-lg'/>
         </Link>
         <button
           onClick={toggleMenu}
@@ -36,27 +40,27 @@ const Navbar = () => {
           </svg>
         </button>
         <div className={`w-full md:block md:w-auto ${isOpen ? 'block' : 'hidden'}`} id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <Link href="/" className="block py-2 px-3 text-black bg-red-800 rounded md:bg-transparent md:text-gray-400 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Inicio</Link>
+              <Link href="/" onClick={handleLinkClick} className="block py-2 px-3 text-black bg-red-800 rounded md:bg-transparent md:text-gray-400 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Inicio</Link>
             </li>
             <li>
-              <Link href="/acerca-nosotros" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Acerca Nosotros</Link>
+              <Link href="/acerca-nosotros" onClick={handleLinkClick} className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Acerca Nosotros</Link>
             </li>
             <li>
-              <Link href="/nuestros-servicios" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Nuestros servicios</Link>
+              <Link href="/nuestros-servicios" onClick={handleLinkClick} className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Nuestros servicios</Link>
             </li>
             <li>
-              <Link href="/#diplomados" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Diplomados</Link>
+              <Link href="/#diplomados" onClick={handleLinkClick} className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Diplomados</Link>
             </li>
             <li>
-              <Link href="/alianzas-estrategicas" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Alianzas estrategicas</Link>
+              <Link href="/alianzas-estrategicas" onClick={handleLinkClick} className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Alianzas estrategicas</Link>
             </li>
             <li>
-              <Link href="/contactanos" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactanos</Link>
+              <Link href="/contactanos" onClick={handleLinkClick} className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactanos</Link>
             </li>
             <li>
-              <Link href="/sucursales" className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sucursales</Link>
+              <Link href="/sucursales" onClick={handleLinkClick} className="block py-2 px-3 text-white rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sucursales</Link>
             </li>
           </ul>
         </div>
