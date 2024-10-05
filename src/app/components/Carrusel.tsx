@@ -25,7 +25,7 @@ const Carousel = ({ children }: CarouselProps) => {
   }, [nextSlide]);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full ">
       <div className="overflow-hidden relative">
         <div
           className="flex transition-transform duration-1000 ease-in-out"

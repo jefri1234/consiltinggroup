@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Agradecimiento from './components/Agradecimiento';
 import FooterEnlaces from './components/FooterEnlaces';
+import CertificateVerification from './components/Verificar-certificado';
 
 const Home = () => {
   return (
@@ -60,18 +61,19 @@ const Home = () => {
 
       <Footer />
 
-      <div className='p-5'>
-        <h2 className='text-center mx-auto text-4xl text-white bg-red-800 font-bold max-w-max p-2 rounded-lg' id='diplomados'>
-          Nuestras especializaciones para ti
-        </h2>
+      <div className='bg-gray-950'>
+        <div className='p-5'>
+          <h2 className='text-center mx-auto text-4xl text-white bg-red-800 font-bold max-w-max p-2 rounded-lg' id='diplomados'>
+            Nuestras especializaciones para ti
+          </h2>
+        </div>
+        <HomePage />
       </div>
 
-      <HomePage />
-
-      <div className='text-center'>
-        <h1 className='titulo-swiper pt-7'>Certificate como Especialista</h1>
+      <div className='text-center bg-gray-900 text-white'>
+        <h1 className='titulo-swiper pt-7 text-3xl lg:text-5xl text-white font-bold mb-4'>Certificate como Especialista</h1>
         <EfectoSwiper />
-        <h2 className='subtitulo-swiper'>Preparate para trasender en el mundo laboral</h2>
+        <h2 className='text-gray-300 pb-5'>Preparate para trasender en el mundo laboral</h2>
       </div>
 
       <Beneficios />
@@ -85,7 +87,7 @@ const Home = () => {
           className='boton-watsap-estatico'
         />
       </Link> */}
-
+      <CertificateVerification />
       <Agradecimiento />
       <FooterEnlaces className='pt-20' />
     </>

@@ -10,14 +10,13 @@ function FooterEnlaces({ className }: { className: string }) {
       <div className="mx-auto max-w-screen-xl px-4">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link href="#" passHref>
+            <Link href="/" passHref>
               <div className="flex items-center cursor-pointer">
                 <Image
-                  src="/img/logo-consilting.jpg"
+                  src="/img/logo-consulting.png"
                   width={120}
                   height={120}
                   alt="Logo"
-                  className="rounded-md p-1 bg-white"
                 />
               </div>
             </Link>
