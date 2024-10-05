@@ -3,7 +3,7 @@ import React from 'react'
 import '@/app/css/_diplomado.css'
 import Image from 'next/image'
 import DiplomaInfo from './Diplomainfo'
-import FooterEnlaces from '../components/FooterEnlaces'
+import FooterEnlaces from '@/app/components/FooterEnlaces'
 import Temario from './Temario'
 import DocentePrincipal from './Docente'
 import Formulario from './formulario'
@@ -24,15 +24,15 @@ function Diplomado() {
             <main className=' container-2xl '>
                 <section className='flex flex-col justify-center items-center gap-5 font-bold seccion-item py-20 bg-red-900 text-white'>
                     <div className='flex items-center justify-center flex-col'>
-                        <Image src='./iconos/icon-calendar.png' alt='' width={50} height={50} />
+                        <Image src='/iconos/icon-calendar.png' alt='' width={50} height={50} />
                         <p>inicio: 19 de octubre del 2024</p>
                     </div>
                     <div className='flex items-center justify-center flex-col'>
-                        <Image src='./iconos/icon-clock.png' alt='' width={50} height={50} />
+                        <Image src='/iconos/icon-clock.png' alt='' width={50} height={50} />
                         <p>7:00 pm a 10:00 pm</p>
                     </div>
                     <div className='flex items-center justify-center flex-col'>
-                        <Image src='./iconos/icon-transmission.png' alt='' width={50} height={50} />
+                        <Image src='/iconos/icon-transmission.png' alt='' width={50} height={50} />
                         <p>Transmisión por ZOOM en Vivo </p>
 
                     </div>
