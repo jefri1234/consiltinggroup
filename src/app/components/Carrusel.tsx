@@ -1,5 +1,4 @@
 "use client"
-import Image from 'next/image';
 import { useState, useEffect, ReactNode, useCallback } from 'react';
 
 type CarouselProps = {
@@ -39,29 +38,7 @@ const Carousel = ({ children }: CarouselProps) => {
         </div>
       </div>
       
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 rounded-full p-2 shadow"
-      >
-        <Image 
-        src='/img/flecha-izquierda.png'
-        width={40}
-        height={40}
-        alt='flechaizquierda'
-        />
-      </button>
 
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 rounded-full p-2 shadow"
-      >
-        <Image 
-        src='/img/flecha-derecha.png'
-        width={40}
-        height={40}
-        alt='flechaderecha'
-        />
-      </button>
     </div>
   );
 };

@@ -1,30 +1,37 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 function Agradecimiento() {
   return (
-    <div className='flex justify-center items-center py-52 px-3 
-        m-auto contenedor-agradecimiento'>
-        <div className='text-center'>
-        <h1 className='mb-5'>GRASIAS POR VISITARNOS</h1>
-        <p className=''>Si deseas mas imformacion sobre nuestras especializaciones o representas una empresa que desea capacitar a su colaboradores</p>
-        <h2 className=' pt-3 pb-6'>PONTE EN CONTACTO CON NOSOTROS</h2>
+    <div className="flex justify-center items-center py-20 px-4 m-auto contenedor-agradecimiento min-h-screen bg-cover bg-center">
+      <div className="text-center bg-black bg-opacity-50 p-8 rounded-lg max-w-xl w-full">
+        <h1 className="mb-5 text-3xl font-extrabold text-white">
+          ¡Gracias por visitarnos!
+        </h1>
+        <p className="text-lg text-gray-300 mb-5">
+          Si deseas más información sobre nuestras especializaciones o representas una empresa que desea capacitar a sus colaboradores, 
+          no dudes en contactarnos.
+        </p>
+        <h2 className="text-2xl font-semibold text-white pt-3 pb-6">
+          Ponte en contacto con nosotros
+        </h2>
 
-        <div className=' flex justify-center items-center gap-3 bg-green-600 max-w-max m-auto p-2 rounded-md text-white font-bold '>
-            <Image 
-            src='/img/watsap.png'
+        <div className="flex justify-center items-center gap-3 bg-green-600 max-w-max m-auto p-3 rounded-md text-white font-bold hover:bg-green-700 transition duration-300">
+          <Image 
+            src="/img/watsap.png"
             width={40}
             height={40}
-            alt='watsap'
-            />
-            <Link href='https://api.whatsapp.com/send?phone=51991403402&text=Hola,%20me%20puedes%20informar%20sobre: '>
+            alt="WhatsApp"
+            className="rounded-full"
+          />
+          <Link href="https://api.whatsapp.com/send?phone=51991403402&text=Hola,%20me%20puedes%20informar%20sobre: ">
             Conversa con Nosotros
-            </Link>
-       </div>
+          </Link>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Agradecimiento
+export default Agradecimiento;

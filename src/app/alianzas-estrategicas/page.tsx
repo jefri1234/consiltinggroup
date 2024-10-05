@@ -2,10 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 const AlianzasEstrategicas: React.FC = () => {
   return (
-    <div className="bg-gray-200 py-12 px-4 md:px-8 lg:px-24 xl:px-32 h-full">
+    <div className=" py-12 px-4 md:px-8 lg:px-24 xl:px-32 h-screen bg-gray-900 ">
       {/* Título del componente */}
       <section className="text-center mb-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
           Alianzas Estratégicas
         </h1>
       </section>
@@ -24,7 +24,7 @@ const AlianzasEstrategicas: React.FC = () => {
         </div>
 
         {/* Descripción de la alianza */}
-        <div className="md:flex-1">
+        <div className="md:flex-1 ">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
             Universidad Nacional Mayor de San Marcos
           </h2>
