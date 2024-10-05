@@ -4,7 +4,7 @@ import React from 'react';
 
 function Agradecimiento() {
   return (
-    <div className="flex justify-center items-center py-20 px-4 m-auto contenedor-agradecimiento min-h-screen bg-cover bg-center">
+    <div className="flex justify-center items-center py-20 px-4 m-auto contenedor-agradecimiento h-full bg-cover bg-center">
       <div className="text-center bg-black bg-opacity-50 p-8 rounded-lg max-w-xl w-full">
         <h1 className="mb-5 text-3xl font-extrabold text-white">
           ¡Gracias por visitarnos!
