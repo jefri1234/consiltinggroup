@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import Link from "next/link";
 import LogoutButton from '@/app/components/botonCerrarSesion'
+import DownloadButton from "@/app/components/Dowloadbuttom";
 
 async function page() {
     const prisma = new PrismaClient()
@@ -20,6 +21,7 @@ async function page() {
                     Regresar a Panel
                 </Link>
                 <LogoutButton />
+                <DownloadButton/>
             </div>
 
             <div className="overflow-x-auto">

@@ -3,6 +3,12 @@ import { PrismaClient } from '@prisma/client';
 import { z } from 'zod';
 const prisma = new PrismaClient();
 
+
+//ESTA API ES PARA PODER REGISTRAR O GUARDAR LOS DATOS , EN LA PARTE DE INSCRIPCION 
+//DONDE LLENAN EL FORMULARIO Y SE REGISTRAAN 
+//----1) VALIDAMOS CON ZOD   ----  2) GUARDAMOS EN LA TALBA userRegistrados
+//DEL CURSO DE MUNICAPAL.....
+
 const userSchema = z.object({
   nombre: z.string().min(1, { message: "Nombre es requerido" }),
   apellido: z.string().min(1, { message: "Apellido es requerido" }),
