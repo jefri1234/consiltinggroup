@@ -16,12 +16,21 @@ function Diplomado() {
             <header className='header'>
                 <div className='portada'>
                     <h1 className='titulo-diplomado'>DIPLOMADO GRATUITO EN GESTIÓN PÚBLICA MUNICIPAL Y REGIONAL</h1>
-                    <Image src='/img/sanmarcos-logo.png' alt='sanmarcos' width={500} height={500} className='m-auto pt-7 px-5'/>
+                    <Image src='/img/sanmarcos-logo.png' alt='sanmarcos' width={500} height={500} className='m-auto  px-5'/>
                 </div>
             </header>
-
-
             <main className=' container-2xl '>
+                
+                <section className=' contenedor '>
+                    <div className="pt-10 flex flex-col gap-6 items-center justify-center contenedor-formulario">
+                        <Formulario/>
+                    </div>
+
+                    <div>
+                        <Image src='/img/peoplework.png' alt='persona' width={600} height={600}/>
+                    </div>
+                </section>
+
                 <section className='flex flex-col justify-center items-center gap-5 font-bold seccion-item py-20 bg-red-900 text-white'>
                     <div className='flex items-center justify-center flex-col'>
                         <Image src='/iconos/icon-calendar.png' alt='' width={50} height={50} />
@@ -38,15 +47,6 @@ function Diplomado() {
                     </div>
                 </section>
 
-                <section className=' contenedor '>
-                    <div className="pt-20 flex flex-col gap-6 items-center justify-center contenedor-formulario">
-                        <Formulario/>
-                    </div>
-
-                    <div>
-                        <Image src='/img/peoplework.png' alt='persona' width={600} height={600}/>
-                    </div>
-                </section>
 
                 <section className='py-5 bg-gray-900 flex flex-col gap-5 justify-center items-center p-5 pb-20'>
                     <h2 className='text-white text-center font-bold text-2xl pt-3'>ESPECIALIZATE Y ACREDITATE CON LA UNMSM</h2>
