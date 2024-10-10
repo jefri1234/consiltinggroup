@@ -16,13 +16,13 @@ function Diplomado() {
             <header className='header'>
                 <div className='portada'>
                     <h1 className='titulo-diplomado'>DIPLOMADO GRATUITO EN GESTIÓN PÚBLICA MUNICIPAL Y REGIONAL</h1>
-                    <Image src='/img/sanmarcos-logo.png' alt='sanmarcos' width={500} height={500} className='m-auto  px-5'/>
+                    <Image src='/img/sanmarcos-logo.png' alt='sanmarcos' width={500} height={500} className='m-auto  px-1'/>
                 </div>
             </header>
             <main className=' container-2xl '>
                 
                 <section className=' contenedor '>
-                    <div className="pt-10 flex flex-col gap-6 items-center justify-center contenedor-formulario">
+                    <div className="pt-5 flex flex-col gap-6 items-center justify-center contenedor-formulario">
                         <Formulario/>
                     </div>
 

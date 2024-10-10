@@ -50,7 +50,7 @@ const router= useRouter()
     <div>
       <h2 className='text-2xl font-bold pb-10'>Completa el Formulario para Registrarse</h2>
       <form
-        className="bg-gray-100 w-full p-20 rounded-lg shadow-lg formulario"
+        className="bg-gray-100 w-full p-10 rounded-lg shadow-lg formulario"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-6">
