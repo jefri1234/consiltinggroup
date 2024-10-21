@@ -26,24 +26,16 @@ function FooterEnlaces({ className }: { className: string }) {
               <h2 className="mb-6 text-sm font-semibold text-white uppercase">Servicios</h2>
               <ul className="font-medium">
                 <li className="mb-4">
-                  <Link href="#" passHref>
-                    <span className="hover:text-gray-400 transition-colors duration-300">Especializaciones Empleables</span>
-                  </Link>
+                    <span>Especializaciones Empleables</span>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" passHref>
-                    <span className="hover:text-gray-400 transition-colors duration-300">Capacitaciones In Company</span>
-                  </Link>
+                    <span>Capacitaciones In Company</span>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" passHref>
-                    <span className="hover:text-gray-400 transition-colors duration-300">Reclutamiento y Selección de personal</span>
-                  </Link>
+                    <span>Reclutamiento y Selección de personal</span>
                 </li>
                 <li>
-                  <Link href="#" passHref>
-                    <span className="hover:text-gray-400 transition-colors duration-300">Consultoría y Asesoría en RRHH</span>
-                  </Link>
+                    <span >Consultoría y Asesoría en RRHH</span>
                 </li>
               </ul>
             </div>
@@ -51,27 +43,27 @@ function FooterEnlaces({ className }: { className: string }) {
               <h2 className="mb-6 text-sm font-semibold text-white uppercase">Ayuda</h2>
               <ul className="font-medium">
                 <li className="mb-4">
-                  <Link href="#" passHref>
+                  <Link href="/politicas-de-proteccion-de-datos" passHref>
                     <span className="hover:text-gray-400 transition-colors duration-300">Políticas de Protección de Datos</span>
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" passHref>
+                  <Link href="/terminos-de-servicio" passHref>
                     <span className="hover:text-gray-400 transition-colors duration-300">Términos de servicio</span>
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" passHref>
+                  <Link href="/politicas-de-cookies" passHref>
                     <span className="hover:text-gray-400 transition-colors duration-300">Políticas de Cookies</span>
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" passHref>
+                  <Link href="/politicas-de-calidad" passHref>
                     <span className="hover:text-gray-400 transition-colors duration-300">Política de la Calidad</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" passHref>
+                  <Link href="/libro-de-reclamaciones" passHref>
                     <span className="hover:text-gray-400 transition-colors duration-300">Libro de Reclamaciones</span>
                   </Link>
                 </li>
@@ -81,9 +73,9 @@ function FooterEnlaces({ className }: { className: string }) {
               <h2 className="mb-6 text-sm font-semibold text-white uppercase">Contáctanos</h2>
               <ul className="font-medium">
                 <li className="mb-4">
-                  <Link href="#" passHref>
-                    <span className="hover:text-gray-400 transition-colors duration-300">Visítanos:</span>
-                  </Link>
+                  
+                    <span>Visítanos:</span>
+                  
                 </li>
                 <li className="mb-4">
                   <span>Calle las Camelias 877 - San Isidro, Lima - Perú</span>

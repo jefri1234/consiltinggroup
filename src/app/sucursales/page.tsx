@@ -14,7 +14,7 @@ const Sucursales: React.FC = () => {
       </p>
 
       {/* Sucursales y mapa */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center gap-20 items-center ">
         {/* Información de sucursales */}
         <div className="flex flex-col gap-6">
           {/* Sucursal 1 */}

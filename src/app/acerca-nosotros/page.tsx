@@ -1,14 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
+import BotonWatsap from '../components/BotonWatsap';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-gray-950 py-12 px-4 md:px-8 lg:px-16">
+    <div className="bg-gray-950  py-12 px-4 md:px-8 lg:px-16">
       {/* Título */}
       <section className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-white">
+        <h1 className="text-3xl md:text-4xl font-bold text-white pb-5">
           Formamos a los ejecutivos <br /> que van a destacar <br /> en el mundo laboral
         </h1>
+        <BotonWatsap/>
       </section>
 
       {/* Misión y Visión */}

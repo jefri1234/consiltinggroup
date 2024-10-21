@@ -1,17 +1,20 @@
 import React from 'react';
+import BotonWatsap from '../components/BotonWatsap';
 
 const NuestrosServicios: React.FC = () => {
   return (
-    <div className="bg-gray-950 py-12 px-4 md:px-8 lg:px-16 h-screen">
+    <div className="bg-gray-950  py-10 h-full px-4 md:px-8 lg:px-16 ">
       {/* Título del componente */}
       <section className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-white">
           Nuestros Servicios
         </h1>
-        <p className="text-white mt-2">
+        <p className="text-white mt-2 pb-4">
           Descubre los servicios que ofrecemos para mejorar la competitividad y eficiencia de tu empresa.
         </p>
+        <BotonWatsap/>
       </section>
+      
 
       {/* Servicios */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -66,6 +69,7 @@ const NuestrosServicios: React.FC = () => {
           </p>
         </div>
       </section>
+      
     </div>
   );
 };

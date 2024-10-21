@@ -12,11 +12,7 @@ model User {
   id_usuario     Int           @id @default(autoincrement())
   tipoUser       String?       @default("estudiante")
   usuario        String
-  nombre         String
-  apellido       String
   contrasena     String
-  telefono       String
-  fecha_registro DateTime      @default(now())
   inscripciones  Inscripcion[]
 
   @@map("usuario")

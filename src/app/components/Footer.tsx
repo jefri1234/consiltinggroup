@@ -19,7 +19,7 @@ const Footer = () => {
 
                 <div className="flex gap-3">
                   <Image className=" w-11" src="/img/iconn-formacion.png" alt="" width={100} height={100}/>
-                    Docentes Principales<br/>Universidades del Pais
+                    Docentes de las Principales<br/>Universidades del Pais
                 </div>
 
                 <div className="flex gap-3 justify-center items-center">

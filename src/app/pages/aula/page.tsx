@@ -115,8 +115,8 @@ const Aula: React.FC = () => {
                       <h1 className='text-2xl font-semibold text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
                     </div>
                     <p className="text-gray-300">{infoProfe.descripcion}</p>
-                    <p className="text-gray-300">{infoProfe.email}</p>
-                    <p className="text-gray-300">Más información: <span className='text-blue-400 cursor-pointer hover:underline'>{infoProfe.linkedin}</span></p>
+                    
+                    <div className="text-gray-300">Más información: <Link href={infoProfe.linkedin} className='text-blue-400 cursor-pointer hover:underline'>{infoProfe.linkedin}</Link></div>
                   </div>
                 </div>
               </div>
