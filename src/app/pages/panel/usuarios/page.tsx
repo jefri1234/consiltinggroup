@@ -34,11 +34,7 @@ async function page() {
               <th className="py-2 px-4 text-left">ID</th>
               <th className="py-2 px-4 text-left">Tipo usuario</th>
               <th className="py-2 px-4 text-left">Usuario</th>
-              <th className="py-2 px-4 text-left">Nombre</th>
-              <th className="py-2 px-4 text-left">Apellido</th>
               <th className="py-2 px-4 text-left">Contraseña</th>
-              <th className="py-2 px-4 text-left">Teléfono</th>
-
               <th className="py-2 px-4 text-left">ACCIONES</th>
 
             </tr>
@@ -50,10 +46,7 @@ async function page() {
                   <td className="py-2 px-4">{user.id_usuario}</td>
                   <td className="py-2 px-4">{user.tipoUser}</td>
                   <td className="py-2 px-4">{user.usuario}</td>
-                  <td className="py-2 px-4">{user.nombre}</td>
-                  <td className="py-2 px-4">{user.apellido}</td>
                   <td className="py-2 px-4">{user.contrasena}</td>
-                  <td className="py-2 px-4">{user.telefono}</td>
                   <td className="py-2 px-4">
 
                     <Link href={`/pages/panel/usuarios/${user.id_usuario}`} className="px-3 py-2 bg-blue-600 my-3 inline-block rounded-lg text-white font-bold mr-2">

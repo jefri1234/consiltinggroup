@@ -8,10 +8,7 @@ import { useRouter } from 'next/navigation';
 
 function Page() {
   const [usuario, setUsuario] = useState('')
-  const [nombre, setNombre] = useState('')
-  const [apellido, setApellido] = useState('')
   const [contrasena, setContrasena] = useState('')
-  const [telefono, setTelefono] = useState('')
 
   const router= useRouter()
 
@@ -19,7 +16,7 @@ function Page() {
     e.preventDefault();
     const res = await fetch('../../../../api/createusuario',{
       method:'POST',
-      body:JSON.stringify({usuario,nombre,apellido,contrasena,telefono}),
+      body:JSON.stringify({usuario,contrasena}),
       headers:{
         "Content-Type":"application/json",
       },
@@ -52,33 +49,9 @@ function Page() {
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="nombre" className="block text-gray-700 font-bold mb-2">
-            Nombre
-          </label>
-          <input
-          name='nombre'
-            type="text"
-            id="nombre"
-            className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-            placeholder="Nombre"
-            onChange={(e)=>setNombre(e.target.value)}
-          />
-        </div>
 
-        <div className="mb-4">
-          <label htmlFor="apellido" className="block text-gray-700 font-bold mb-2">
-            Apellido
-          </label>
-          <input
-            name='apellido'
-            type="text"
-            id="apellido"
-            className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-            placeholder="Apellido"
-            onChange={(e)=>setApellido(e.target.value)}
-          />
-        </div>
+
+
 
         <div className="mb-4">
           <label htmlFor="contrasena" className="block text-gray-700 font-bold mb-2">
@@ -95,19 +68,7 @@ function Page() {
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="telefono" className="block text-gray-700 font-bold mb-2">
-            Teléfono
-          </label>
-          <input
-            name='telefono'
-            type="tel"
-            id="telefono"
-            className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-            placeholder="Teléfono"
-            onChange={(e)=>setTelefono(e.target.value)}
-          />
-        </div>
+
 
 
        

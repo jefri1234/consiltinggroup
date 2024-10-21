@@ -6,10 +6,7 @@ import { useRouter } from 'next/navigation'
 function Page({ params }: { params: { id: string } }) {
 
   const [usuario, setUsuario] = useState('')
-  const [nombre, setNombre] = useState('')
-  const [apellido, setApellido] = useState('')
   const [contrasena, setContrasena] = useState('')
-  const [telefono, setTelefono] = useState('')
   const router =useRouter()
 
   useEffect(() => {
@@ -17,10 +14,7 @@ function Page({ params }: { params: { id: string } }) {
         .then((res )=> res.json())
         .then((data) => {
           setUsuario(data.data.usuario)
-          setNombre(data.data.nombre)
-          setApellido(data.data.apellido)
           setContrasena(data.data.contrasena)
-          setTelefono(data.data.telefono)
         });
   }, [params.id]);
 
@@ -29,7 +23,7 @@ function Page({ params }: { params: { id: string } }) {
     e.preventDefault()
    const actualizar= await fetch('../../../../api/usuarios/'+params.id,{
       method:"PUT",
-      body:JSON.stringify({usuario,nombre,apellido,contrasena,telefono}),
+      body:JSON.stringify({usuario,contrasena}),
       headers:{
         "Content-Type":"apllication/json"
       },
@@ -60,35 +54,6 @@ function Page({ params }: { params: { id: string } }) {
             autoFocus
           />
         </div>
-
-        <div className="mb-4">
-          <label htmlFor="nombre" className="block text-gray-700 font-bold mb-2">
-            Nombre
-          </label>
-          <input
-            type="text"
-            id="nombre"
-            className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-            placeholder="Nombre"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="apellido" className="block text-gray-700 font-bold mb-2">
-            Apellido
-          </label>
-          <input
-            type="text"
-            id="apellido"
-            className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-            placeholder="Apellido"
-            value={apellido}
-            onChange={(e) => setApellido(e.target.value)}
-          />
-        </div>
-
         <div className="mb-4">
           <label htmlFor="contrasena" className="block text-gray-700 font-bold mb-2">
             Contraseña
@@ -105,19 +70,7 @@ function Page({ params }: { params: { id: string } }) {
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="telefono" className="block text-gray-700 font-bold mb-2">
-            Teléfono
-          </label>
-          <input
-            type="tel"
-            id="telefono"
-            className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-            placeholder="Teléfono"
-            value={telefono}
-            onChange={(e) => setTelefono(e.target.value)}
-          />
-        </div>
+
 
         <div className="flex justify-center">
           <button
