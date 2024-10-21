@@ -6,15 +6,12 @@ const prisma = new PrismaClient();
 export async function POST(request: NextRequest) {
   try {
     // Extraer datos del cuerpo de la solicitud
-    const { usuario, nombre, apellido, contrasena, telefono} = await request.json();
+    const { usuario, contrasena,} = await request.json();
 
     // Validación para verificar que todos los campos estén presentes y no estén vacíos
     if (
       !usuario ||
-      !nombre ||
-      !apellido ||
-      !contrasena ||
-      !telefono
+      !contrasena 
     ) {
       console.log("erro al crear")
       return NextResponse.json(
@@ -30,10 +27,7 @@ export async function POST(request: NextRequest) {
     const user = await prisma.user.create({
       data: {
         usuario,
-        nombre,
-        apellido,
         contrasena,
-        telefono
       },
     });
 
