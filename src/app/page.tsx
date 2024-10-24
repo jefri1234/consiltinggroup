@@ -12,6 +12,7 @@ import Agradecimiento from './components/Agradecimiento';
 import FooterEnlaces from './components/FooterEnlaces';
 import CertificateVerification from './components/Verificar-certificado';
 
+
 const Home = () => {
   return (
     <>
@@ -37,6 +38,7 @@ const Home = () => {
             <Image src="/redes-sociales/icon-youtube.png" alt="YouTube" width={30} height={30} />
           </Link>
         </div>
+        
 
         {/* Main Content */}
         <div className='bg-red-800 flex justify-center items-center text-white contenedor-btn-aulaVirtual'>

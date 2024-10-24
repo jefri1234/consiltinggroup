@@ -9,6 +9,7 @@ interface CardProps {
   curso: string;
   imageSrc: string;
   watsap:string;
+  enlace:string
   children?: React.ReactNode; // Añadiendo `children` manualmente
 }
 
@@ -56,12 +57,10 @@ const Card: React.FC<CardProps> = ({ title, curso, imageSrc, children , watsap }
             alt='watsap'
           />
         </Link>
-        <Link href='#' className=' bg-red-700 text-white p-2 rounded-lg font-bold'>
+        <Link href={'/diplomados-informacion/'+curso} className=' bg-red-700 text-white p-2 rounded-lg font-bold'>
           Mas imformacion
         </Link>
-
       </div>
-
     </div>
   );
 }

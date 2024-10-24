@@ -2,18 +2,18 @@ import React from 'react';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
-async function createCurso(){
+async function createSeccion(){
 
   
 }
 
 
 function CreaDatos() {
-  createCurso()
+  createSeccion()
   return (
     
     <div>
-      Creando material...
+      Creando...
     </div>
   );
 }

@@ -9,9 +9,8 @@ const CertificateVerification = () => {
           <Image 
             src="/img/ejecutivos.png" 
             alt="Persona feliz con laptop" 
-            layout="fill" 
-            objectFit="contain"  // Mantiene proporciones sin deformar
-            className="rounded-lg"
+            width={350}
+            height={350}
           />
         </div>
       </div>

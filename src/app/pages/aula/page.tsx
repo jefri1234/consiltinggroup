@@ -82,7 +82,7 @@ const Aula: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-6 bg-gray-800 rounded-lg py-10 px-5">
             {cursos.map((curso, index) => (
               <div className='flex flex-col lg:flex-row gap-6' key={index}>
-                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg shadow-md hover:bg-gray-700 text-white w-full lg:w-1/2 transition duration-300 ease-in-out'>
+                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg shadow-md hover:bg-gray-700 text-white w-full lg:w-1/3 max-h-max transition duration-300 ease-in-out'>
                   <div>
                     <Image
                       src={curso.imagen}
@@ -104,7 +104,7 @@ const Aula: React.FC = () => {
                     <h1 className='text-2xl font-semibold mb-2'>{curso.nombre}</h1>
                     <p className="text-gray-300">{curso.description}</p>
                   </div>
-                  <div className='flex items-center gap-2 mt-4'>
+                  <div className='flex items-center gap-2 my-6'>
                     <Image src='/iconos/icon-docente.png' width={40} height={40} alt="foto" />
                     <p className='text-xl font-semibold'>Docente Asignado</p>
                   </div>
