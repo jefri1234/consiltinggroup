@@ -18,7 +18,7 @@ interface CardProps {
 //3)desustruramos los props directamente en los argumentos de la funcion para usar dentro del component
 
 //Uso de Props: Desestructura los props en los argumentos del componente para usarlos directamente.
-const Card: React.FC<CardProps> = ({ title, curso, imageSrc, children , watsap }) => {
+const Card: React.FC<CardProps> = ({ title, curso, imageSrc, children , watsap,enlace }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-gray-900 pb-5">
       <Image className="w-full" src={imageSrc} alt={title} width={100} height={100} />
@@ -57,7 +57,7 @@ const Card: React.FC<CardProps> = ({ title, curso, imageSrc, children , watsap }
             alt='watsap'
           />
         </Link>
-        <Link href={'/diplomados-informacion/'+curso} className=' bg-red-700 text-white p-2 rounded-lg font-bold'>
+        <Link href={'/diplomados-informacion/'+enlace} className=' bg-red-700 text-white p-2 rounded-lg font-bold'>
           Mas imformacion
         </Link>
       </div>
