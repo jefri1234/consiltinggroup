@@ -20,7 +20,7 @@ interface CardProps {
 //Uso de Props: Desestructura los props en los argumentos del componente para usarlos directamente.
 const Card: React.FC<CardProps> = ({ title, curso, imageSrc, children , watsap,enlace }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-gray-900 pb-5">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-gray-900 pb-5 hover:bg-gray-800 transition-all">
       <Image className="w-full" src={imageSrc} alt={title} width={100} height={100} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2 text-center text-white">{title}</div>

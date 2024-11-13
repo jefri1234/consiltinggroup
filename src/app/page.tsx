@@ -18,23 +18,23 @@ const Home = () => {
     <>
       <div>
         {/* Social Media Sidebar */}
-        <div className="fixed right-0 top-1/3 z-50 flex flex-col space-y-1 p-1">
-          <Link href="https://www.facebook.com/groupconsultingperu?mibextid=ZbWKwL" target="_blank" className="bg-blue-600 p-2 rounded-full">
+        <div className="fixed right-0 top-1/3 z-50 flex flex-col  ">
+          <Link href="https://www.facebook.com/groupconsultingperu?mibextid=ZbWKwL" target="_blank" className="bg-blue-700 p-2 hover:bg-blue-600">
             <Image src="/redes-sociales/icon-facebook.png" alt="Facebook" width={30} height={30} />
           </Link>
-          <Link href="https://www.instagram.com/consulting.group.peru?igsh=MWhwbmVodzkwYzc2ZA==" target="_blank" className="bg-pink-600 p-2 rounded-full">
+          <Link href="https://www.instagram.com/consulting.group.peru?igsh=MWhwbmVodzkwYzc2ZA==" target="_blank" className="bg-pink-700 p-2 hover:bg-pink-600">
             <Image src="/redes-sociales/icon-instagram.png" alt="Instagram" width={30} height={30} />
           </Link>
-          <Link href="https://www.linkedin.com/company/consultinggroup/" target="_blank" className="bg-blue-700 p-2 rounded-full">
+          <Link href="https://www.linkedin.com/company/consultinggroup/" target="_blank" className="bg-blue-700 p-2 hover:bg-blue-600">
             <Image src="/redes-sociales/icon-linkeding.png" alt="LinkedIn" width={30} height={30} />
           </Link>
-          <Link href="https://www.tiktok.com/@consulting.group.peru?_t=8oDafwW0FiX&_r=1" target="_blank" className="bg-black p-2 rounded-full">
+          <Link href="https://www.tiktok.com/@consulting.group.peru?_t=8oDafwW0FiX&_r=1" target="_blank" className="bg-gray-800 p-2 hover:bg-gray-700">
             <Image src="/redes-sociales/icon-tiktok.png" alt="TikTok" width={30} height={30} />
           </Link>
-          <Link href="https://api.whatsapp.com/send?phone=51991403402&text=Hola,%20me%20puedes%20informar%20sobre:" target="_blank" className="bg-green-300 p-2 rounded-full">
+          <Link href="https://api.whatsapp.com/send?phone=51991403402&text=Hola,%20me%20puedes%20informar%20sobre:" target="_blank" className="bg-green-500 p-2 hover:bg-green-400">
             <Image src="/redes-sociales/icon-watsap.png" alt="WhatsApp" width={30} height={30} />
           </Link>
-          <Link href="https://youtube.com/@consultinggroup1?si=n7uaZqHQwgAMcyMe" target="_blank" className="bg-red-600 p-2 rounded-full">
+          <Link href="https://youtube.com/@consultinggroup1?si=n7uaZqHQwgAMcyMe" target="_blank" className="bg-red-700 p-2 hover:bg-red-600">
             <Image src="/redes-sociales/icon-youtube.png" alt="YouTube" width={30} height={30} />
           </Link>
         </div>

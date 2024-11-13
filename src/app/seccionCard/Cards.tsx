@@ -11,9 +11,7 @@ const HomePage: React.FC = () => {
         watsap='https://bit.ly/3xbZ9WQ'
         enlace='1'
       >
-        <p>jeff</p>
-        <h1>marvin y zay</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae fugit et cupiditate, voluptates cum aliquam nisi dolor? Error, magni cumque.</p>
+
       </Card>
 
       <Card
@@ -32,7 +30,7 @@ const HomePage: React.FC = () => {
       />
       <Card
         title="Diplomado GRATUITO"
-        curso="GESTIÓN DE PLANILLA Y LEGISLACIÓN LABORAL"
+        curso="ASISTENTE DE PLANILLA Y LEGISLACIÓN LABORAL"
         imageSrc="/cursos/planilla.jpg"
         watsap='https://bit.ly/4dMWTo4 '
         enlace='4'
