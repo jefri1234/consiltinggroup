@@ -70,63 +70,77 @@ const Aula: React.FC = () => {
   }
 
   return (
-    <div className="py-10 bg-gray-950 text-white">
-      <h1 className="text-2xl mb-6 mx-6 bg-gray-900 rounded-lg p-4 font-bold text-red-600 flex items-center gap-2 shadow-md">
-        <Image src="/iconos/icon-course.png" width={50} height={50} alt="logo" />
-        <span>||</span>
-        <p>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
-      </h1>
+    <div className='bg-gray-950 flex  '>
+      
 
-      <div className="p-5">
-        {Array.isArray(cursos) && cursos.length > 0 ? (
-          <div className="flex flex-col lg:flex-row gap-6 bg-gray-800 rounded-lg py-10 px-5">
-            {cursos.map((curso, index) => (
-              <div className='flex flex-col lg:flex-row gap-6' key={index}>
-                <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg shadow-md hover:bg-gray-700 text-white w-full lg:w-1/3 max-h-max transition duration-300 ease-in-out'>
-                  <div>
-                    <Image
-                      src={curso.imagen}
-                      width={600}
-                      height={400}
-                      alt="foto"
-                      className="w-full h-auto rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h2 className="text-xl font-semibold mb-2">{curso.nombre}</h2>
-                      <p className="font-bold text-gray-300">Duración del curso: {curso.duracion}</p>
-                      <p className="font-bold text-blue-400 pt-2">Ver contenido</p>
+      <div className=" bg-gray-950 text-white  container mx-auto flex flex-col gap-5 pt-5 px-5">
+        <div className='container mx-auto py-5 bg-gray-800 rounded-lg flex gap-5 flex-wrap justify-evenly font-semibold text-xl px-3'>
+          <Link className=' hover:text-gray-400' href="#" >Contenido</Link>
+          <Link className=' hover:text-gray-400' href="#">Calendario</Link>
+          <Link className=' hover:text-gray-400' href="#">Anuncios</Link>
+          <Link className=' hover:text-gray-400' href="#">Calificaciones</Link>
+          <Link className=' hover:text-gray-400' href="/pages/aula/certificado">Certificado</Link>
+          <Link className=' hover:text-gray-400' href="#">Asistencia</Link>
+        </div>
+
+        <div className="text-2xl   bg-gray-900 rounded-lg p-4 font-bold text-red-600 flex items-center gap-2 shadow-md container mx-auto">
+          <Image src="/iconos/icon-course.png" width={50} height={50} alt="logo" />
+          <span>||</span>
+          <p>{cursos.length > 0 ? cursos[0].nombre.toUpperCase() : 'No courses'}</p>
+        </div>
+
+        <div className="container mx-auto">
+          {Array.isArray(cursos) && cursos.length > 0 ? (
+            <div className="flex flex-col lg:flex-row gap-6 bg-gray-800 rounded-lg py-10 px-5">
+              {cursos.map((curso, index) => (
+                <div className='flex flex-col lg:flex-row gap-6' key={index}>
+                  <Link href={'/pages/aula/' + curso.id_curso} className='bg-gray-900 rounded-lg shadow-md hover:bg-gray-700 text-white w-full lg:w-1/3 max-h-max transition duration-300 ease-in-out'>
+                    <div>
+                      <Image
+                        src={curso.imagen}
+                        width={600}
+                        height={400}
+                        alt="foto"
+                        className="w-full h-auto rounded-t-lg"
+                      />
+                      <div className="p-4">
+                        <h2 className="text-xl font-semibold mb-2">{curso.nombre}</h2>
+                        <p className="font-bold text-gray-300">Duración del curso: {curso.duracion}</p>
+                        <p className="font-bold text-blue-400 pt-2">Ver contenido</p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-
-                <div className='flex flex-col justify-between w-full lg:w-1/2'>
-                  <div className='pt-5 max-w-7xl'>
-                    <h1 className='text-2xl font-semibold mb-2'>{curso.nombre}</h1>
-                    <p className="text-gray-300">{curso.description}</p>
-                  </div>
-                  <div className='flex items-center gap-2 my-6'>
-                    <Image src='/iconos/icon-docente.png' width={40} height={40} alt="foto" />
-                    <p className='text-xl font-semibold'>Docente Asignado</p>
-                  </div>
-
-                  <div className='bg-gray-900 rounded-lg p-4 max-w-7xl shadow-md'>
-                    <div className='flex items-center gap-4 py-2'>
-                      <Image src={infoProfe.imagen} width={80} height={80} alt="foto" className='rounded-full' />
-                      <h1 className='text-2xl font-semibold text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
+                  </Link>
+                  
+                  <div className='flex flex-col justify-between w-full '>
+                    <div className='pt-5 w-full'>
+                      <h1 className='text-2xl font-semibold mb-2'>{curso.nombre}</h1>
+                      <p className="text-gray-300">{curso.description}</p>
                     </div>
-                    <p className="text-gray-300">{infoProfe.descripcion}</p>
-                    
-                    
+                    <div className='flex items-center gap-2 my-6'>
+                      <Image src='/iconos/icon-docente.png' width={40} height={40} alt="foto" />
+                      <p className='text-xl font-semibold'>Docente Asignado</p>
+                    </div>
+
+                    <div className='bg-gray-900 rounded-lg p-4 max-w-7xl shadow-md'>
+                      <div className='flex items-center gap-4 py-2'>
+                        <Image src={infoProfe.imagen} width={80} height={80} alt="foto" className='rounded-full' />
+                        <h1 className='text-2xl font-semibold text-blue-500'>ING. {infoProfe.nombre} {infoProfe.apellido}</h1>
+                      </div>
+                      <p className="text-gray-300">{infoProfe.descripcion}</p>
+
+
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p className="flex justify-center items-center text-xl">Cursos no encontrados.</p>
-        )}
+              ))}
+            </div>
+          ) : (
+            <p className="flex justify-center items-center text-xl">Cursos no encontrados.</p>
+          )}
+        </div>
+        <FooterEnlaces className='pt-10' />
       </div>
-      <FooterEnlaces className='pt-10' />
+
     </div>
   );
 };

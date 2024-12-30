@@ -1,0 +1,633 @@
+[
+    {
+      "id": 1,
+      "nombres": "Jim Paul Barba Elizalde",
+      "DNI": "70043493",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 2,
+      "nombres": "César Antonio Errea Amico",
+      "DNI": "07828655",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 3,
+      "nombres": "Maryolly Ibet Martel Susanibar",
+      "DNI": "48526345",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 4,
+      "nombres": "Reydeyby Cristobal Vino",
+      "DNI": "47034216",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 5,
+      "nombres": "Julio César Torres Santos",
+      "DNI": "41340556",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 6,
+      "nombres": "Homero Raul Diaz Delgado",
+      "DNI": "41455890",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 7,
+      "nombres": "Lisset Veronica Lino Ruíz",
+      "DNI": "43400474",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 8,
+      "nombres": "Antonia Salas Loayza",
+      "DNI": "09570485",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 9,
+      "nombres": "Sebastián Fernando Flores Gómez",
+      "DNI": "72861016",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 10,
+      "nombres": "Amador Moises Villanueva Linares",
+      "DNI": "42552284",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 11,
+      "nombres": "Ysidora Nieves Huamani Luyo De Bustamante",
+      "DNI": "15423657",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 12,
+      "nombres": "Solanger Kim López Urbina",
+      "DNI": "71238331",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 13,
+      "nombres": "Cynthia Karin Palomino Buleje",
+      "DNI": "43441681",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 14,
+      "nombres": "Echeverría Arévalo Yvette Angelita",
+      "DNI": "42512050",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 15,
+      "nombres": "Angie Amelia Candiotte Quispe",
+      "DNI": "74633170",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 16,
+      "nombres": "Marielita Toro Altamirano",
+      "DNI": "48514408",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 17,
+      "nombres": "Josefina Mamani Pumaccahua",
+      "DNI": "23865805",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 18,
+      "nombres": "Mateo Antonio De Lucas Montero",
+      "DNI": "70535581",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 19,
+      "nombres": "Dáney Llusara Fasanando Ríos",
+      "DNI": "70979980",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 20,
+      "nombres": "Juan Carlos Ruiz Ulloa",
+      "DNI": "41003663",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 21,
+      "nombres": "Yasmine Patricia Ortiz Florez",
+      "DNI": "74152356",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 22,
+      "nombres": "Betty Margot Poma Loli",
+      "DNI": "31671113",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 23,
+      "nombres": "Ismael Eduardo Miranda López",
+      "DNI": "74862237",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 24,
+      "nombres": "Sandra Elizabet Cauna Chambilla",
+      "DNI": "47812690",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 25,
+      "nombres": "George Antony Álvarez Jara",
+      "DNI": "74249526",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 26,
+      "nombres": "Mauricio Martin Hinojosa Pinto",
+      "DNI": "73615187",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 27,
+      "nombres": "Pedro Junior Alarcon Alvarez",
+      "DNI": "46554693",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 28,
+      "nombres": "Jennifer Milagros Garcia Miraya",
+      "DNI": "45267196",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 29,
+      "nombres": "Hernán Adolfo Machado Romero",
+      "DNI": "40927741",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 30,
+      "nombres": "Corzo Ponte Jhonathan Eduardo",
+      "DNI": "46343943",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 31,
+      "nombres": "Cristhian Gabriel Liendo Arana",
+      "DNI": "74035076",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 32,
+      "nombres": "Kevin Saul Balcazar Quesquen",
+      "DNI": "70979796",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 33,
+      "nombres": "Edward Gianmarco Valverde Mamani",
+      "DNI": "75157914",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 34,
+      "nombres": "Victor Manuel Balcázar Calderón",
+      "DNI": "16447268",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 35,
+      "nombres": "José Alfonso Maslucán Culqui",
+      "DNI": "09903703",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 36,
+      "nombres": "Walter José Temoche Veron",
+      "DNI": "46724318",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 37,
+      "nombres": "Edwin Cabrera Zanabria",
+      "DNI": "40425276",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 38,
+      "nombres": "Vicente Jose Granadino Galindo",
+      "DNI": "09144396",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 39,
+      "nombres": "Carmen Jessenia Espinoza Garrido",
+      "DNI": "46786475",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 40,
+      "nombres": "Teodomiro Romani Garcés",
+      "DNI": "05266490",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 41,
+      "nombres": "Vanessa Catherine García Salguero",
+      "DNI": "07262367",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 42,
+      "nombres": "José Duverli Castillo Neyra",
+      "DNI": "03242005",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 43,
+      "nombres": "Cesar Johnny Taype Ignacio",
+      "DNI": "44315477",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 44,
+      "nombres": "John Felix Tello Román",
+      "DNI": "09825422",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 45,
+      "nombres": "Ricardo Javier Salinas Llerena",
+      "DNI": "76506350",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 46,
+      "nombres": "Franklyn Garcia Condori",
+      "DNI": "74780647",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 47,
+      "nombres": "José Roberto Acosta De La Cruz",
+      "DNI": "44754513",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 48,
+      "nombres": "Miguel Ángel Meléndez Maldonado",
+      "DNI": "40938745",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 49,
+      "nombres": "Roger Vicente Sanchez Cano",
+      "DNI": "75212810",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 50,
+      "nombres": "Marco Antonio Flores Castro",
+      "DNI": "02836955",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 51,
+      "nombres": "Freddy Adalberto Soto Sánchez",
+      "DNI": "15430564",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 52,
+      "nombres": "Giancarlo Coaquira Apaza",
+      "DNI": "70971635",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 53,
+      "nombres": "Robert Enrique Malqui Palomino",
+      "DNI": "42758444",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 54,
+      "nombres": "Rossi Vianey Arhuata Arcaya",
+      "DNI": "71047007",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 55,
+      "nombres": "Rony Klever Vega Vásquez",
+      "DNI": "72980446",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 56,
+      "nombres": "Rodolfo Ever Mondargo Martínez",
+      "DNI": "45330122",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 57,
+      "nombres": "Eduardo Geovany Torres Aguilar",
+      "DNI": "42478460",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 58,
+      "nombres": "Ronal Omar Silva Aranda",
+      "DNI": "72696909",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 59,
+      "nombres": "Claudia Margaret Revilla Cortez",
+      "DNI": "72863511",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 60,
+      "nombres": "Cristian Roger Huanca Lampa",
+      "DNI": "70656526",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 61,
+      "nombres": "Vieri Yutber Ariza Simeón",
+      "DNI": "72134048",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 62,
+      "nombres": "Josohe Pucllas Quispe",
+      "DNI": "45719478",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 63,
+      "nombres": "María Paola Flores Molina",
+      "DNI": "40398327",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 64,
+      "nombres": "Aldo Juan Bartolo Marchena",
+      "DNI": "09186767",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 65,
+      "nombres": "Giovanni Martin Cardenas Astoray",
+      "DNI": "44244763",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 66,
+      "nombres": "Oscar Artemio Flores Saavedra",
+      "DNI": "43658158",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 67,
+      "nombres": "Hugo Miraya Oscco",
+      "DNI": "80164539",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 68,
+      "nombres": "Ruth Angela Mamani Villafuerte",
+      "DNI": "44382207",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 69,
+      "nombres": "Joselin Rebeca Verde Roncal",
+      "DNI": "70134128",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 70,
+      "nombres": "Walberto Incarroca Ccachainca",
+      "DNI": "23966606",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 71,
+      "nombres": "Francisco Americo Segovia Lazo",
+      "DNI": "73144550",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 72,
+      "nombres": "Pedro Alejo Mamani",
+      "DNI": "42203630",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 73,
+      "nombres": "Victor Jose, Damian Gonzales",
+      "DNI": "41570656",
+      "Diploma de Especialización Profesional": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 74,
+      "nombres": "Xiomara Maribith Mestanza Jara",
+      "DNI": "75023804",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 75,
+      "nombres": "Bruno Albieri Bullón Bellido",
+      "DNI": "71599184",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 76,
+      "nombres": "José Luis Salvatierra Huamán",
+      "DNI": "06236754",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 77,
+      "nombres": "Wegman Alain Zambrano Grandez",
+      "DNI": "05405392",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 78,
+      "nombres": "Katiusca Sabina Cabrera Paniagua",
+      "DNI": "40725123",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 79,
+      "nombres": "Irma Haydee Herrera Valdivia",
+      "DNI": "44259331",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 80,
+      "nombres": "Mariela Liset Castillo Tori",
+      "DNI": "43283006",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 81,
+      "nombres": "Daniel Luis Moncada Roncal",
+      "DNI": "70181763",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 82,
+      "nombres": "Julio Cesar Sotelo Falcon",
+      "DNI": "42467347",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 83,
+      "nombres": "Danner Aleksei Apolinario Cruz",
+      "DNI": "71539360",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 84,
+      "nombres": "Francis Moises Coppola Cervera",
+      "DNI": "41675748",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 85,
+      "nombres": "Brand Antony Suarez Huangal",
+      "DNI": "75385411",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 86,
+      "nombres": "Elmer Walter Rosales Garcia",
+      "DNI": "09057195",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 87,
+      "nombres": "Rosita Milagros Rodríguez Izquierdo",
+      "DNI": "74221547",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 88,
+      "nombres": "Alonso Gabriel Sarmiento Aguilar",
+      "DNI": "75285809",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 89,
+      "nombres": "Maira Janeth Sandoval Peña",
+      "DNI": "74527204",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 90,
+      "nombres": "Marco Antonio Valenzuela Ruiz",
+      "DNI": "71397107",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 91,
+      "nombres": "Miguel Antonio Salcedo Valencia",
+      "DNI": "23942781",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 92,
+      "nombres": "Luis Miguel Munaya Albino",
+      "DNI": "44768760",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 93,
+      "nombres": "Diana Patricia Huacchillo Nonajulca",
+      "DNI": "03698377",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 94,
+      "nombres": "Deysi Lastemia Tananta Salgado",
+      "DNI": "70983744",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 95,
+      "nombres": "Colichon Rebatta Piero Sebastian",
+      "DNI": "71727101",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 96,
+      "nombres": "Everth Acosta Aguiar",
+      "DNI": "19669439",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 97,
+      "nombres": "Elvin Supa Usca",
+      "DNI": "48389761",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 98,
+      "nombres": "Acosta Villalba María Del Pilar",
+      "DNI": "44338661",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 99,
+      "nombres": "Cynthia Fiorella Quiroz Cañazaca",
+      "DNI": "73183721",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 100,
+      "nombres": "Daniel Israel Uribe Claudio",
+      "DNI": "40417600",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 101,
+      "nombres": "Mónica Navarro Alvarado",
+      "DNI": "15860345",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 102,
+      "nombres": "Augusto Auccapure Vallenas",
+      "DNI": "23892657",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 103,
+      "nombres": "Jenko Mijahil Villacorta Cárdenas",
+      "DNI": "74626924",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 104,
+      "nombres": "Edwin Jesus Gonzales Yaipen",
+      "DNI": "43302152",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    },
+    {
+      "id": 105,
+      "nombres": "Carmen Melena Peseros Solís",
+      "DNI": "07465237",
+      "diploma_especializacion": "Gestión Pública Municipal y Regional"
+    }
+  ]
+  

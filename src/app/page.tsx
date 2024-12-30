@@ -38,12 +38,14 @@ const Home = () => {
             <Image src="/redes-sociales/icon-youtube.png" alt="YouTube" width={30} height={30} />
           </Link>
         </div>
-        
+
 
         {/* Main Content */}
-        <div className='bg-red-800 flex justify-center items-center text-white contenedor-btn-aulaVirtual'>
-          <h1 className="text-center text-3xl p-3">Apasionados por lo que hacemos</h1>
-          <Link href="/login" className='boton-aulavirtual'>
+        <div className='bg-red-800 flex justify-center items-center text-white contenedor-btn-aulaVirtual py-4'>
+          <h1 className="text-center text-3xl p-3 font-bold"
+          >Apasionados por lo que hacemos</h1>
+          <Link href="/login" className='boton-aulavirtual 
+          hover:bg-red-700 font-bold text-white p-2 rounded-lg '>
             Ingreso Aula Virtual
           </Link>
         </div>
@@ -60,12 +62,12 @@ const Home = () => {
           </div>
         </Carousel>
       </div>
-
       <Footer />
 
       <div className='bg-gray-950'>
         <div className='p-5'>
-          <h2 className='text-center mx-auto text-4xl text-white bg-red-800 font-bold max-w-max p-2 rounded-lg' id='diplomados'>
+          <h2 className='text-center mx-auto text-4xl text-white  max-w-max 
+          font-bold mt-5 mb-5 lg:text-5xl ' id='diplomados'>
             Nuestras especializaciones para ti
           </h2>
         </div>

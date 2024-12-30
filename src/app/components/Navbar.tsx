@@ -22,10 +22,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-red-800 dark:bg-gray-900  w-full">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-1">
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/img/logo-consulting.png" alt="logo-consulting" width={150} height={150}/>
+    <nav className="bg-red-800 dark:bg-gray-900  w-full text-center border-red-700 border-solid border-b-2">
+      <div className="flex flex-wrap items-center justify-evenly mx-auto p-1">
+        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse py-3">
+          <Image src="/img/logo-consulting.png" alt="logo-consulting" width={150} height={150} priority={true} />
         </Link>
         <button
           onClick={toggleMenu}

@@ -4,10 +4,7 @@ import './globals.css';
 import Head from 'next/head';
 
 
-export const metadata = {
-  title: 'Consulting Group',
-  description: 'consulting group',
-};
+
 
 export default function RootLayout({
   children,
@@ -16,33 +13,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <Head>
-      <meta name="google" content="notranslate" />
-        {/* Título de la página */}
-        <title>CertificaCursos - Cursos online con certificados</title>
+     <Head>
+        <title>Mi página Next.js</title>
+        <meta name="description" content="Descripción de la página" />
         
-        {/* Metadatos generales */}
-        <meta name="description" content="Ofrecemos una amplia variedad de cursos online con la posibilidad de obtener certificados al finalizar." />
-        <meta name="keywords" content="cursos online, certificados, educación en línea, certificación de cursos, aprender en línea , consultinggroup" />
-        <meta name="author" content="CertificaCursos" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-
-        {/* Open Graph para redes sociales */}
-        <meta property="og:title" content="CertificaCursos - Cursos online con certificados" />
-        <meta property="og:description" content="Obtén tu certificado en cualquier curso que elijas al completar las lecciones. Inscríbete hoy." />
-        <meta property="og:image" content="/img/grupo-consultinggroup.jpg" />
-        <meta property="og:url" content="https://www.facebook.com/groupconsultingperu" />
-        <meta property="og:type" content="https://consultinggroup.com.pe" />
-
-
-
         {/* Favicon */}
         <link rel="icon" href="/img/aulavirtual.png" />
         
+        {/* Otros tamaños de icono para diferentes dispositivos */}
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        
+        {/* Si tienes un manifiesto de la web */}
+        <link rel="manifest" href="/manifest.json" />
       </Head>
+
       <body>
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
