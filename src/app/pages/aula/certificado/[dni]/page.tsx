@@ -39,10 +39,6 @@ function Certificado({params}: {params: {dni: string}}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  console.log("valor usuario porfa", dni);
-  
-
-
   // Fetch de los datos del usuario
   useEffect(() => {
     const fetchUsuario = async () => {

@@ -79,7 +79,7 @@ const Aula: React.FC = () => {
           <Link className=' hover:text-gray-400' href="#">Calendario</Link>
           <Link className=' hover:text-gray-400' href="#">Anuncios</Link>
           <Link className=' hover:text-gray-400' href="#">Calificaciones</Link>
-          <Link className=' hover:text-gray-400' href="/pages/aula/certificado">Certificado</Link>
+          <Link className=' hover:text-gray-400' href="#">Certificado</Link>
           <Link className=' hover:text-gray-400' href="#">Asistencia</Link>
         </div>
 
