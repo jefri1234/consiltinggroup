@@ -4,8 +4,13 @@ import { useRouter } from "next/navigation"; // Importar el hook 'useRouter'
 import { z } from "zod"; // Usando Zod para validación
 import Image from 'next/image';
 
+//interface que contiene una propiedad className opcional.
+interface CertificateVerificationProps {
+  className?: string;  // Definir una propiedad opcional 'className' para pasar estilos personalizados
+}
 
-const CertificateVerification = () => {
+//componente acepte una propiedad (props) de tipo className
+const CertificateVerification: React.FC<CertificateVerificationProps> = ({ className }) => {
 
   const dniRef = useRef<HTMLInputElement>(null); // Definir el tipo correctamente
   const [error, setError] = useState(""); // Estado para manejar errores
@@ -33,9 +38,9 @@ const CertificateVerification = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-900 p-10 ">
-      {/* Imagen */}
-      <div className="flex justify-center w-full mb-6">
+    <div className={`bg-gray-900  ${className}`}>
+
+      <div className="flex justify-center  mb-6">
         <Image 
           src="/img/ejecutivos.png" 
           alt="Persona feliz con laptop" 
@@ -45,8 +50,7 @@ const CertificateVerification = () => {
         />
       </div>
 
-      {/* Contenido */}
-      <div className="w-full max-w-md text-center lg:text-left">
+      <div className=" max-w-md text-center lg:text-left">
         <h1 className="text-xl md:text-2xl lg:text-3xl text-white font-bold mb-4">
           Verificación de Certificado
         </h1>
@@ -81,6 +85,7 @@ const CertificateVerification = () => {
           ¡Sigue adelante y alcanza nuevas metas!
         </p>
       </div>
+
     </div>
   );
 };

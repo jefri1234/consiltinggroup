@@ -22,7 +22,7 @@ const CrearCertificado = ({ alumno }: { alumno: string }) => {
     return (
         <Document>
             <Page size={[1600, 1132]} style={style.page}>
-                <Image src="/img/certificado-municipal.jpg" style={style.imagen} />
+                <Image src="/constancias/constancia-municipal.jpg" style={style.imagen} />
                 <View style={{ alignItems: 'center', justifyContent: 'center', height: '100%' }}>
                     <Text style={style.texto}>{alumno}</Text>
                 </View>

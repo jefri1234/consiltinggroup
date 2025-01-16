@@ -41,12 +41,15 @@ const Home = () => {
 
 
         {/* Main Content */}
-        <div className='bg-red-800 flex justify-center items-center text-white contenedor-btn-aulaVirtual py-4'>
-          <h1 className="text-center text-3xl p-3 font-bold"
-          >Apasionados por lo que hacemos</h1>
+        <div className='bg-red-800 flex justify-center items-center text-white contenedor-btn-aulaVirtual py-4 gap-5'>
+          <h1 className="text-center text-3xl p-3 font-bold">Apasionados por lo que hacemos</h1>
           <Link href="/login" className='boton-aulavirtual 
           hover:bg-red-700 font-bold text-white p-2 rounded-lg '>
             Ingreso Aula Virtual
+          </Link>
+          <Link href="/certificado" className='boton-aulavirtual 
+          hover:bg-red-700 font-bold text-white p-2 rounded-lg '>
+            Verificar Certificado
           </Link>
         </div>
 
@@ -91,7 +94,7 @@ const Home = () => {
           className='boton-watsap-estatico'
         />
       </Link> */}
-      <CertificateVerification />
+      <CertificateVerification className='flex flex-col justify-center items-center py-10' />
       <Agradecimiento />
       <FooterEnlaces className='pt-20' />
     </>

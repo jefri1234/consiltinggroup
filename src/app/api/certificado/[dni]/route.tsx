@@ -3,7 +3,6 @@ import path from 'path';
 
 export async function GET(request:Request , { params } : { params: { dni: string } }) {
   const { dni } = params;  // Extraemos el DNI de los parámetros de la URL
-  console.log("DNI extraído en la API:", dni);
 
   try {
     // Lee el archivo JSON desde la raíz del proyecto
@@ -26,7 +25,8 @@ export async function GET(request:Request , { params } : { params: { dni: string
     return new Response(
       JSON.stringify(alumno), { status: 200 }
     );
-  } catch (error) {
+  } 
+  catch (error) {
     return new Response(
       JSON.stringify({ error: 'Error al acceder al archivo JSON' }),
       { status: 500 }
