@@ -7,6 +7,12 @@ import Link from "next/link";
 interface Usuario {
     nombres: string;
     dni: string;
+    curso:string;
+}
+
+interface CrearCertificadoProps {
+    alumno: string;
+    curso: string; // Añadido el prop curso
 }
 
 // Estilos del documento PDF
@@ -18,11 +24,11 @@ const style = StyleSheet.create({
 });
 
 // Componente para crear el certificado en formato PDF
-const CrearCertificado = ({ alumno }: { alumno: string }) => {
+const CrearCertificado = ({ alumno, curso }: CrearCertificadoProps) => {
     return (
         <Document>
             <Page size={[1600, 1132]} style={style.page}>
-                <Image src="/constancias/constancia-municipal.jpg" style={style.imagen} />
+                <Image src={`/constancias/${curso}.jpg`} style={style.imagen} />
                 <View style={{ alignItems: 'center', justifyContent: 'center', height: '100%' }}>
                     <Text style={style.texto}>{alumno}</Text>
                 </View>
@@ -31,9 +37,9 @@ const CrearCertificado = ({ alumno }: { alumno: string }) => {
     );
 };
 
-function Certificado({ params }: { params: { dni: string } }) {
+function Certificado({ params }: { params: { curso:string,dni: string } }) {
 
-    const { dni } = params;
+    const { dni, curso } = params;
 
     const [usuario, setUsuario] = useState<Usuario | null>(null);
     const [loading, setLoading] = useState(true);
@@ -43,14 +49,20 @@ function Certificado({ params }: { params: { dni: string } }) {
     useEffect(() => {
         const fetchUsuario = async () => {
             try {
-                const res = await fetch(`/api/certificado/${dni}`);
+                const res = await fetch('/api/certificado', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ dni, curso })  // Enviamos dni y curso en el body
+                });
+
                 if (!res.ok) {
                     throw new Error('Error al obtener el usuario');
                 }
 
                 const data: Usuario = await res.json();
                 setUsuario(data);
-
             } catch (err: any) {
                 setError(err.message);
             } finally {
@@ -58,10 +70,10 @@ function Certificado({ params }: { params: { dni: string } }) {
             }
         };
 
-        if (dni) {
+        if (dni && curso) {
             fetchUsuario();
         }
-    }, [dni]);
+    }, [dni, curso]);
 
 
 
@@ -80,7 +92,7 @@ function Certificado({ params }: { params: { dni: string } }) {
 
     // Función para manejar la descarga del PDF
     const handleDownload = async () => {
-        const doc = <CrearCertificado alumno={usuario.nombres} />;
+        const doc = <CrearCertificado alumno={usuario.nombres} curso={curso} />;
         const blob = await pdf(doc).toBlob();
         const url = URL.createObjectURL(blob);
 
@@ -104,11 +116,11 @@ function Certificado({ params }: { params: { dni: string } }) {
                 >
                     Descargar
                 </button>
-                <Link href="/" className="bg-red-600 py-2 px-4 rounded-md">Regresar</Link>
+                <Link href="/certificado" className="bg-red-600 py-2 px-4 rounded-md">Regresar</Link>
             </div>
 
             <PDFViewer height={600} width={700} className="bg-gray-900 p-5 rounded-lg ">
-                <CrearCertificado alumno={usuario.nombres} />
+                <CrearCertificado alumno={usuario.nombres} curso={curso} />
             </PDFViewer>
 
 

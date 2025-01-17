@@ -1,12 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 
-export async function GET(request:Request , { params } : { params: { dni: string } }) {
-  const { dni } = params;  // Extraemos el DNI de los parámetros de la URL
-
+export async function POST(request:Request) {
+  const { dni, curso } = await request.json(); // Aquí extraemos el JSON enviado en el cuerpo
+  console.log("curso: " + curso)
+  console.log("dni: " + dni)
+  
   try {
     // Lee el archivo JSON desde la raíz del proyecto
-    const filePath = path.resolve('alumnos.json');
+    const filePath = path.resolve(`constancias-data/${curso}.json`);
     const data = fs.readFileSync(filePath, 'utf-8');
     const alumnos = JSON.parse(data);
 
