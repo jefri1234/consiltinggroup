@@ -71,7 +71,14 @@ const HomePage: React.FC = () => {
         watsap='https://bit.ly/3NsMmnn'
         enlace='9'
       />
-      {/* Puedes agregar más Card aquí con diferentes props */}
+        <Card
+        title="Diplomado GRATUITO"
+        curso="GESTION DE SISTEMAS INTEGRADOS ISO:9001"
+        imageSrc="/cursos/gestion-sistemas-integrados-iso.jpg"
+        watsap='https://bit.ly/40BEAyB'
+        enlace='10'
+      />
+      
     </div>
   );
 }

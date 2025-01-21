@@ -34,13 +34,14 @@ const Curso: React.FC<CursoProps> = ({
           alt="logo-consulting"
           width={500}
           height={500}
+          className='bg-white p-2 rounded-xl'
         />
         <Image
           src="/img/sanmarcos.jpg"
           alt="sanmarcos"
           width={700}
           height={700}
-
+          className='bg-white p-2 rounded-xl'
         />
       </div>
       <div className='bg-gray-800 p-5'>

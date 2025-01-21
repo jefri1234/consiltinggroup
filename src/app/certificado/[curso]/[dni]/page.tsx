@@ -7,7 +7,7 @@ import Link from "next/link";
 interface Usuario {
     nombres: string;
     dni: string;
-    curso:string;
+    curso: string;
 }
 
 interface CrearCertificadoProps {
@@ -37,7 +37,7 @@ const CrearCertificado = ({ alumno, curso }: CrearCertificadoProps) => {
     );
 };
 
-function Certificado({ params }: { params: { curso:string,dni: string } }) {
+function Certificado({ params }: { params: { curso: string, dni: string } }) {
 
     const { dni, curso } = params;
 
@@ -75,13 +75,18 @@ function Certificado({ params }: { params: { curso:string,dni: string } }) {
         }
     }, [dni, curso]);
 
-
+    if (!usuario) {
+        return <div>  <div className="bg-gray-900 p-2 text-white text-center flex flex-col justify-center items-center h-screen gap-5">
+            <p className="text-2xl">No se encontró un usuario con el DNI proporcionado</p>
+            <Link href="/certificado" className="bg-red-600 py-2 px-4 rounded-md">Regresar</Link>
+        </div></div>;
+    }
 
     if (error) {
         return <div>
             <div className="bg-gray-800 p-2 text-white text-center flex flex-col justify-center items-center h-screen gap-5">
-                <p className="text-2xl">Error al obtener el usuario</p>
-                <Link href="/" className="bg-red-600 py-2 px-4 rounded-md">Regresar</Link>
+                <p className="text-2xl">ocurrio un error vueleve a ingresar</p>
+                <Link href="/certificado" className="bg-red-600 py-2 px-4 rounded-md">Regresar</Link>
             </div>
         </div>;
     }
