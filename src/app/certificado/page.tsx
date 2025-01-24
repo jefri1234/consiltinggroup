@@ -10,7 +10,7 @@ import Link from 'next/link'
 function Certificacion() {
     const { theme } = useTheme();
     return (
-        <div className="bg-gray-950 h-screen container mx-auto px-4">
+        <div className="h-screen container mx-auto px-4">
 
             <div className='text-white flex justify-center items-center flex-col'>
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
@@ -43,7 +43,23 @@ function Certificacion() {
                             className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl shadow-2xl px-6 py-10 sm:px-10 sm:py-14 min-w-max"
                             gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
                         >
-                            <p>GESTIÓN PUBLICA MUNICIPAL Y REGIONAL</p>
+                            <p className='text-center'>GESTIÓN PUBLICA MUNICIPAL Y<br></br> REGIONAL</p>
+                        </MagicCard>
+                    </Link>
+                    <Link href="/certificado/municipal" className='w-full'>
+                        <MagicCard
+                            className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl shadow-2xl px-6 py-10 sm:px-10 sm:py-14 min-w-max"
+                            gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
+                        >
+                            <p>SEGURIDAD Y SALUD EN EL TRABAJO</p>
+                        </MagicCard>
+                    </Link>
+                    <Link href="/certificado/municipal" className='w-full'>
+                        <MagicCard
+                            className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl shadow-2xl px-6 py-10 sm:px-10 sm:py-14 min-w-max"
+                            gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
+                        >
+                            <p className='text-center'>SISTEMA INTEGRADO DE ADMINISTRACION <br></br>FINANCIERA - SIAF</p>
                         </MagicCard>
                     </Link>
                 </div>

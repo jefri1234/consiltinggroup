@@ -20,11 +20,11 @@ async function crearMateriales() {
   //crear una nueva materiales
   const materiales = await prisma.material.create({
     data: {
-      id_material: 104,
-      id_seccion: 32,
-      nombre: "video clase",
+      id_material: 108,
+      id_seccion:34,
+      nombre: "video de clase",
       tipo: "video",
-      url: "https://www.youtube.com/watch?v=8clXxIl3BFY"
+      url: "https://youtu.be/dWKPT7HlwXE"
     }
   })
 
@@ -57,7 +57,7 @@ async function crearInscripcion() {
 
 
   function CreaDatos() {
-    createSeccion();
+    crearMateriales();
     return (
 
       <div>

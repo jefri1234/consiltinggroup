@@ -124,9 +124,11 @@ function Certificado({ params }: { params: { curso: string, dni: string } }) {
                 <Link href="/certificado" className="bg-red-600 py-2 px-4 rounded-md">Regresar</Link>
             </div>
 
-            <PDFViewer height={600} width={700} className="bg-gray-900 p-5 rounded-lg ">
+           <div className="flex justify-center items-center w-full">  
+           <PDFViewer height={500} width={600} className="bg-gray-900 p-5 rounded-lg ">
                 <CrearCertificado alumno={usuario.nombres} curso={curso} />
             </PDFViewer>
+           </div>
 
 
         </div>

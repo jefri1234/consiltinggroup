@@ -74,14 +74,7 @@ const Aula: React.FC = () => {
       
 
       <div className=" bg-gray-950 text-white  container mx-auto flex flex-col gap-5 pt-5 px-5">
-        <div className='container mx-auto py-5 bg-gray-800 rounded-lg flex gap-5 flex-wrap justify-evenly font-semibold text-xl px-3'>
-          <Link className=' hover:text-gray-400' href="#" >Contenido</Link>
-          <Link className=' hover:text-gray-400' href="#">Calendario</Link>
-          <Link className=' hover:text-gray-400' href="#">Anuncios</Link>
-          <Link className=' hover:text-gray-400' href="#">Calificaciones</Link>
-          <Link className=' hover:text-gray-400' href="#">Certificado</Link>
-          <Link className=' hover:text-gray-400' href="#">Asistencia</Link>
-        </div>
+       
 
         <div className="text-2xl   bg-gray-900 rounded-lg p-4 font-bold text-red-600 flex items-center gap-2 shadow-md container mx-auto">
           <Image src="/iconos/icon-course.png" width={50} height={50} alt="logo" />

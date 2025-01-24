@@ -39,7 +39,7 @@ const CertificateVerification = ({ params }: { params: { curso: string } }) => {
     }
 
     return (
-        <div className='bg-gray-900 flex justify-center items-center gap-10 py-20'>
+        <div className='flex flex-wrap justify-center items-center gap-10 py-20 px-10'>
 
             <div className="flex justify-center  mb-6">
                 <Image
